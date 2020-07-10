@@ -65,6 +65,24 @@
     "react-dom": "^16",
     "theme-ui": "^0.3"
   },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
   "scripts": {
     "build": "tsc -p ./tsconfig.dist.json",
     "storybook": "start-storybook -p 9009 -s ./assets",
