@@ -1,7 +1,45 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { Theme } from 'theme-ui';
 
+const defaultBadge = {
+  backgroundColor: 'gray_1',
+  borderRadius: '38px',
+  color: 'text',
+  py: 1,
+  px: 3,
+};
+
+const badges = {
+  primary: defaultBadge,
+  success: {
+    ...defaultBadge,
+    backgroundColor: 'success',
+    color: 'background',
+  },
+  lightest: {
+    ...defaultBadge,
+    backgroundColor: 'gray_2',
+    color: 'gray_0',
+  },
+  warning: {
+    ...defaultBadge,
+    backgroundColor: 'primary',
+    color: 'background',
+  },
+  darker: {
+    ...defaultBadge,
+    backgroundColor: 'secondary',
+    color: 'background',
+  },
+  error: {
+    ...defaultBadge,
+    backgroundColor: 'error',
+    color: 'background',
+  },
+};
+
 const grayscale = ['#9AA0B5', '#E4E6EC', '#EEEFF3', '#F6F6F9'];
+
 const theme = {
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -151,6 +189,7 @@ const theme = {
       },
     },
   },
+  badges,
   styles: {
     root: {
       fontFamily: 'body',
