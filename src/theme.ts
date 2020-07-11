@@ -131,6 +131,13 @@ const theme = {
     },
   },
   forms: {
+    checkbox: {
+      'input:checked ~ &': { color: 'secondary' },
+      'input:disabled ~ &': {
+        color: 'gray_1',
+        bg: 'gray_2',
+      },
+    },
     input: {
       fontFamily: 'body',
       borderRadius: '38px',
