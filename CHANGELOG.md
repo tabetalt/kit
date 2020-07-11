@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/tabetalt/kit/compare/v1.3.0...v1.4.0) (2020-07-11)
+
+
+### Bug Fixes
+
+* Update text on disabled checkbox ([0bf5e85](https://github.com/tabetalt/kit/commit/0bf5e856bac8d0cb0de2b2788bd2ac4a00b0a484)), closes [#19](https://github.com/tabetalt/kit/issues/19)
+
+
+### Features
+
+* **Icons:** Add icons and icon generation scriptAdds a generate script for icons and initial icons.fix [#4](https://github.com/tabetalt/kit/issues/4) ([dad4cfd](https://github.com/tabetalt/kit/commit/dad4cfd8a95a64c0ffb75940e57cb3d2eb0038e3))
+* **Logo:** Add Logo Component ([08f65e2](https://github.com/tabetalt/kit/commit/08f65e2b04f410a4f0cebb73b5b0151b115cbf56)), closes [#13](https://github.com/tabetalt/kit/issues/13)
+
 # [1.3.0](https://github.com/tabetalt/kit/compare/v1.2.0...v1.3.0) (2020-07-11)
 
 
