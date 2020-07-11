@@ -168,6 +168,24 @@ const theme = {
       fontWeight: 'heading',
     },
   },
+  links: {
+    focus: {
+      textDecoration: 'none',
+      color: 'secondary',
+      border: '1px solid',
+      borderColor: 'secondary',
+      p: 1,
+    },
+    visited: {
+      textDecoration: 'underline',
+      color: 'muted',
+    },
+    hover: {
+      textDecoration: 'underline',
+      color: 'primary',
+      cursor: 'pointer',
+    },
+  },
   forms: {
     input: {
       fontFamily: 'body',
@@ -248,6 +266,19 @@ const theme = {
     td: {
       textAlign: 'left',
       borderBottomStyle: 'solid',
+    },
+    a: {
+      color: 'accent',
+      textDecoration: 'underline',
+      '&:hover': {
+        variant: 'links.hover',
+      },
+      '&:focus': {
+        variant: 'links.focus',
+      },
+      '&:visited': {
+        variant: 'links.visited',
+      },
     },
   },
 } as Theme;
