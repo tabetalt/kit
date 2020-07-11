@@ -1,3 +1,4 @@
 import theme from './theme';
-// export * from './components';
-export { theme };
+import * as icons from './icons';
+export * from './components';
+export { theme, icons };
