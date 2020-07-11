@@ -48,6 +48,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GIT_AUTHOR_NAME: Paytr0n
+          GIT_AUTHOR_EMAIL: paytron@tabetalt.no
+          GIT_COMMITTER_NAME: Paytr0n
+          GIT_COMMITTER_EMAIL: paytron@tabetalt.no
 
       - name: Build Storybook
         run: yarn run build-storybook
