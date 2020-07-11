@@ -1,5 +1,8 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+import { Theme } from 'theme-ui';
+
 const grayscale = ['#9AA0B5', '#E4E6EC', '#EEEFF3', '#F6F6F9'];
-export default {
+const theme = {
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -127,6 +130,27 @@ export default {
       fontWeight: 'heading',
     },
   },
+  forms: {
+    input: {
+      fontFamily: 'body',
+      borderRadius: '38px',
+      border: '1px solid',
+      borderColor: 'gray_1',
+      px: 4,
+      py: 3,
+      '&:focus,&:not(:placeholder-shown)': {
+        outline: 'none',
+        borderColor: 'gray_0',
+      },
+      '::placeholder,:-ms-input-placeholder,::-ms-input-placeholder': {
+        color: 'gray_0',
+      },
+      '&:disabled,&[disabled]': {
+        bg: 'highlight',
+        color: 'muted',
+      },
+    },
+  },
   styles: {
     root: {
       fontFamily: 'body',
@@ -187,4 +211,15 @@ export default {
       borderBottomStyle: 'solid',
     },
   },
+} as Theme;
+
+theme.forms!.error = {
+  ...theme.forms!.input,
+  borderColor: 'error',
+  '&:focus,&:not(:placeholder-shown)': {
+    outline: 'none',
+    borderColor: 'error',
+  },
 };
+
+export default theme;
