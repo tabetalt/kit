@@ -1,9 +1,15 @@
 import React from 'react';
-import { Button } from '@theme-ui/components';
+import { Button } from 'theme-ui';
 
-export default { title: 'Button' };
+export default {
+  title: 'Button',
+  component: Button,
+  parameters: { actions: { argTypesRegex: '^on.*' } },
+};
 
-export const defaultButton = () => <Button>Default button</Button>;
+export const defaultButton = (props: any) => (
+  <Button {...props}>Default button</Button>
+);
 export const outlineButton = () => (
   <Button variant="outline">Outline button</Button>
 );
