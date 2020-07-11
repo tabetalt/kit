@@ -24,6 +24,6 @@ export const checkedCheckbox = (props: any) => (
 export const disabledCheckbox = (props: any) => (
   <Label>
     <Checkbox {...props} disabled />
-    Checked checkbox
+    Disabled checkbox
   </Label>
 );
