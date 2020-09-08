@@ -2,7 +2,7 @@
   "name": "@tabetalt/kit",
   "version": "1.0.0",
   "description": "Tabetalt's React-based Components",
-  "main": "build/src/index.ts",
+  "main": "build/index.js",
   "repository": "git@github.com:tabetalt/kit.git",
   "author": "Tabetalt.no AS",
   "license": "Apache-2.0",
