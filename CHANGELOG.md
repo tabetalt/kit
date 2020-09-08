@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/tabetalt/kit/compare/v1.4.0...v1.4.1) (2020-09-08)
+
+
+### Bug Fixes
+
+* Add NPM to semantic release ([a582b39](https://github.com/tabetalt/kit/commit/a582b396a0406c9ec4fa893f56f27f9940e034fc))
+
 # [1.4.0](https://github.com/tabetalt/kit/compare/v1.3.0...v1.4.0) (2020-07-11)
 
 
