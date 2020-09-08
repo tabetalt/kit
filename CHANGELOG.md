@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/tabetalt/kit/compare/v1.4.2...v1.4.3) (2020-09-08)
+
+
+### Bug Fixes
+
+* Add types ([2e068d8](https://github.com/tabetalt/kit/commit/2e068d8324066d4590a45e6b233c282391100cd3))
+
 ## [1.4.2](https://github.com/tabetalt/kit/compare/v1.4.1...v1.4.2) (2020-09-08)
 
 
