@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/tabetalt/kit/compare/v1.4.1...v1.4.2) (2020-09-08)
+
+
+### Bug Fixes
+
+* Add correct main ([517c0f7](https://github.com/tabetalt/kit/commit/517c0f73cb62ba6c22fef96c22c3a509008266e9))
+
 ## [1.4.1](https://github.com/tabetalt/kit/compare/v1.4.0...v1.4.1) (2020-09-08)
 
 
