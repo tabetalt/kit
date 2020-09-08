@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Tabetalt's React-based Components",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "repository": "git@github.com:tabetalt/kit.git",
   "author": "Tabetalt.no AS",
   "license": "Apache-2.0",
