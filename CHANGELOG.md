@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/tabetalt/kit/compare/v1.4.3...v1.4.4) (2020-09-09)
+
+
+### Bug Fixes
+
+* Update Logo export ([3573112](https://github.com/tabetalt/kit/commit/3573112b40a645d87e8a8f069469f2328dc1ab06))
+
 ## [1.4.3](https://github.com/tabetalt/kit/compare/v1.4.2...v1.4.3) (2020-09-08)
 
 
