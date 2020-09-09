@@ -45,6 +45,7 @@ jobs:
           extra_plugins: |
             @semantic-release/changelog@5.0.1
             @semantic-release/git
+            @semantic-release/npm@7.0.6
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

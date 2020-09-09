@@ -1,3 +1,24 @@
+## [1.4.3](https://github.com/tabetalt/kit/compare/v1.4.2...v1.4.3) (2020-09-08)
+
+
+### Bug Fixes
+
+* Add types ([2e068d8](https://github.com/tabetalt/kit/commit/2e068d8324066d4590a45e6b233c282391100cd3))
+
+## [1.4.2](https://github.com/tabetalt/kit/compare/v1.4.1...v1.4.2) (2020-09-08)
+
+
+### Bug Fixes
+
+* Add correct main ([517c0f7](https://github.com/tabetalt/kit/commit/517c0f73cb62ba6c22fef96c22c3a509008266e9))
+
+## [1.4.1](https://github.com/tabetalt/kit/compare/v1.4.0...v1.4.1) (2020-09-08)
+
+
+### Bug Fixes
+
+* Add NPM to semantic release ([a582b39](https://github.com/tabetalt/kit/commit/a582b396a0406c9ec4fa893f56f27f9940e034fc))
+
 # [1.4.0](https://github.com/tabetalt/kit/compare/v1.3.0...v1.4.0) (2020-07-11)
 
 
