@@ -4,9 +4,11 @@
 import React from 'react';
 import { Flex } from 'theme-ui';
 
+import ArrowsIcon from './ArrowsIcon';
 import BoxIcon from './BoxIcon';
 import CheckmarkIcon from './CheckmarkIcon';
 import DashboardIcon from './DashboardIcon';
+import DotsIcon from './DotsIcon';
 import EyeIcon from './EyeIcon';
 import FolderIcon from './FolderIcon';
 import ListIcon from './ListIcon';
@@ -25,11 +27,15 @@ export default {
 
 export const Overview = () => (
   <Flex>
+    <ArrowsIcon />
+
     <BoxIcon />
 
     <CheckmarkIcon />
 
     <DashboardIcon />
+
+    <DotsIcon />
 
     <EyeIcon />
 
@@ -55,9 +61,11 @@ export const Overview = () => (
   </Flex>
 );
 
+export const Arrows = () => <ArrowsIcon />;
 export const Box = () => <BoxIcon />;
 export const Checkmark = () => <CheckmarkIcon />;
 export const Dashboard = () => <DashboardIcon />;
+export const Dots = () => <DotsIcon />;
 export const Eye = () => <EyeIcon />;
 export const Folder = () => <FolderIcon />;
 export const List = () => <ListIcon />;
