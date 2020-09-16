@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/tabetalt/kit/compare/v1.4.4...v1.4.5) (2020-09-16)
+
+
+### Bug Fixes
+
+* **Typography:** Fixes font-sizing according to design specifications ([0566ad4](https://github.com/tabetalt/kit/commit/0566ad4f036b6d85ac877204b5c93cf9d0229944)), closes [#30](https://github.com/tabetalt/kit/issues/30)
+
 ## [1.4.4](https://github.com/tabetalt/kit/compare/v1.4.3...v1.4.4) (2020-09-09)
 
 
