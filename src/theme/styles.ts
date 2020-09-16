@@ -5,35 +5,36 @@ const styles: Theme['styles'] = {
     fontFamily: 'body',
     lineHeight: 'body',
     fontWeight: 'body',
+    fontSize: '16px',
     color: 'text',
     '*': { boxSizing: 'border-box' },
   },
   h1: {
     variant: 'text.heading',
-    fontSize: 7,
+    fontSize: 5,
   },
   h2: {
     variant: 'text.heading',
-    fontSize: 6,
+    fontSize: 4,
   },
   h3: {
     variant: 'text.heading',
-    fontSize: 5,
+    fontSize: 3,
   },
   h4: {
     variant: 'text.heading',
-    fontSize: 4,
+    fontSize: 2,
   },
   h5: {
     variant: 'text.heading',
     fontWeight: 'normal',
-    fontSize: 4,
+    fontSize: 2,
   },
   h6: {
     variant: 'text.heading',
     textTransform: 'uppercase',
     fontWeight: 'normal',
-    fontSize: 2,
+    fontSize: 1,
   },
   pre: {
     fontFamily: 'monospace',
