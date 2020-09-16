@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/tabetalt/kit/compare/v1.4.5...v1.5.0) (2020-09-16)
+
+
+### Features
+
+* **Icons:** Add Arrows ([81c037f](https://github.com/tabetalt/kit/commit/81c037fa45ec2e2b73b299a6de9d40e377be93a5)), closes [#32](https://github.com/tabetalt/kit/issues/32)
+* **Icons:** Add Dots ([b30be95](https://github.com/tabetalt/kit/commit/b30be95993886ec5b9bc4a83693de3e1b0f9529f)), closes [#26](https://github.com/tabetalt/kit/issues/26)
+
 ## [1.4.5](https://github.com/tabetalt/kit/compare/v1.4.4...v1.4.5) (2020-09-16)
 
 
