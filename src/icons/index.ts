@@ -5,6 +5,7 @@
 import BoxIcon from './BoxIcon';
 import CheckmarkIcon from './CheckmarkIcon';
 import DashboardIcon from './DashboardIcon';
+import DotsIcon from './DotsIcon';
 import EyeIcon from './EyeIcon';
 import FolderIcon from './FolderIcon';
 import ListIcon from './ListIcon';
@@ -21,6 +22,7 @@ export {
   BoxIcon,
   CheckmarkIcon,
   DashboardIcon,
+  DotsIcon,
   EyeIcon,
   FolderIcon,
   ListIcon,
