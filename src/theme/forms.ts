@@ -16,6 +16,29 @@ const forms: Theme['forms'] = {
       bg: 'gray2',
     },
   },
+  select: {
+    fontFamily: 'body',
+    borderRadius: '38px',
+    border: '1px solid',
+    borderColor: 'gray1',
+    px: 4,
+    py: 3,
+    '& + svg': {
+      ml: '-3.125rem',
+      // display: 'none',
+    },
+    '&:focus,&:not(:placeholder-shown)': {
+      outline: 'none',
+      borderColor: 'gray0',
+    },
+    '::placeholder,:-ms-input-placeholder,::-ms-input-placeholder': {
+      color: 'gray0',
+    },
+    '&:disabled,&[disabled]': {
+      bg: 'highlight',
+      color: 'muted',
+    },
+  },
   input: {
     fontFamily: 'body',
     borderRadius: '38px',
