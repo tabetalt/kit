@@ -1,6 +1,6 @@
 import React from 'react';
 import { Label, Input, ForwardRef, FieldProps, Flex } from 'theme-ui';
-import { getMargin, omitMargin } from '@theme-ui/components/src/util';
+import { getMargin, omitMargin } from '../util';
 
 export const Field: ForwardRef<
   HTMLDivElement,
