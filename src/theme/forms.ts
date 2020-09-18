@@ -3,11 +3,11 @@ import { Theme, ThemeUIStyleObject } from 'theme-ui';
 
 const sharedInputStyles: ThemeUIStyleObject = {
   fontFamily: 'body',
-  borderRadius: '38px',
+  borderRadius: '23px',
   border: '1px solid',
   borderColor: 'gray1',
-  px: 4,
-  py: 3,
+  px: 3,
+  py: '0.812rem',
   '&:focus,&:not(:placeholder-shown)': {
     outline: 'none',
     borderColor: 'gray0',
@@ -44,6 +44,9 @@ const forms: Theme['forms'] = {
     },
   },
   input: {
+    ...sharedInputStyles,
+  },
+  textarea: {
     ...sharedInputStyles,
   },
 };

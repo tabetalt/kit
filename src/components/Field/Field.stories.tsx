@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from 'theme-ui';
+import { Box, Textarea } from 'theme-ui';
 import { Field } from './Field';
 
 export default {
@@ -22,6 +22,6 @@ export const manyFields = (props: any) => (
       label="This is probably the longest label you've seen!"
       {...props}
     />
-    <Field type="textarea" label="This is actually a textarea" {...props} />
+    <Field as={Textarea} label="This is actually a textarea" {...props} />
   </Box>
 );
