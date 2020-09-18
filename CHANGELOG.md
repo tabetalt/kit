@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/tabetalt/kit/compare/v1.5.0...v1.6.0) (2020-09-18)
+
+
+### Features
+
+* Add Field component ([bd7a66d](https://github.com/tabetalt/kit/commit/bd7a66dc09846f5862181a3ce22ee67bde5d819d)), closes [#28](https://github.com/tabetalt/kit/issues/28)
+* Add Select Component ([77d667d](https://github.com/tabetalt/kit/commit/77d667dde14259ef4ad6c0811fbf7942ea4c4ce7)), closes [#27](https://github.com/tabetalt/kit/issues/27)
+* Add textarea styling and correct a few styles ([4554b89](https://github.com/tabetalt/kit/commit/4554b89ea42c472e29717da4f81c8a55864c8469))
+
 # [1.5.0](https://github.com/tabetalt/kit/compare/v1.4.5...v1.5.0) (2020-09-16)
 
 
