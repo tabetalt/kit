@@ -1,5 +1,25 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { Theme } from 'theme-ui';
+import { Theme, ThemeUIStyleObject } from 'theme-ui';
+
+const sharedInputStyles: ThemeUIStyleObject = {
+  fontFamily: 'body',
+  borderRadius: '23px',
+  border: '1px solid',
+  borderColor: 'gray1',
+  px: 3,
+  py: '0.812rem',
+  '&:focus,&:not(:placeholder-shown)': {
+    outline: 'none',
+    borderColor: 'gray0',
+  },
+  '::placeholder,:-ms-input-placeholder,::-ms-input-placeholder': {
+    color: 'gray0',
+  },
+  '&:disabled,&[disabled]': {
+    bg: 'highlight',
+    color: 'muted',
+  },
+};
 
 const forms: Theme['forms'] = {
   checkbox: {
@@ -16,24 +36,18 @@ const forms: Theme['forms'] = {
       bg: 'gray2',
     },
   },
+  select: {
+    ...sharedInputStyles,
+    '& + svg': {
+      ml: '-3.125rem',
+      // display: 'none',
+    },
+  },
   input: {
-    fontFamily: 'body',
-    borderRadius: '38px',
-    border: '1px solid',
-    borderColor: 'gray1',
-    px: 4,
-    py: 3,
-    '&:focus,&:not(:placeholder-shown)': {
-      outline: 'none',
-      borderColor: 'gray0',
-    },
-    '::placeholder,:-ms-input-placeholder,::-ms-input-placeholder': {
-      color: 'gray0',
-    },
-    '&:disabled,&[disabled]': {
-      bg: 'highlight',
-      color: 'muted',
-    },
+    ...sharedInputStyles,
+  },
+  textarea: {
+    ...sharedInputStyles,
   },
 };
 
