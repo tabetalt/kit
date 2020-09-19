@@ -1,3 +1,5 @@
 import Logo from './Logo/Logo';
 import Field from './Field/Field';
-export { Logo, Field };
+import LoaderIcon from './LoaderIcon/LoaderIcon';
+import LoaderButton from './LoaderButton/LoaderButton';
+export { Logo, Field, LoaderIcon, LoaderButton };
