@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/tabetalt/kit/compare/v1.7.0...v1.8.0) (2020-09-19)
+
+
+### Features
+
+* Add basic Table component ([0535041](https://github.com/tabetalt/kit/commit/0535041db1b3bdd3a013de75a52c716fd3d81543)), closes [#41](https://github.com/tabetalt/kit/issues/41) [#42](https://github.com/tabetalt/kit/issues/42)
+
 # [1.7.0](https://github.com/tabetalt/kit/compare/v1.6.0...v1.7.0) (2020-09-19)
 
 
