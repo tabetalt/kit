@@ -8,7 +8,9 @@ export default {
 };
 
 export const defaultBadge = (props: any) => (
-  <Badge variant="primary" {...props}>Default Badge</Badge>
+  <Badge variant="primary" {...props}>
+    Default Badge
+  </Badge>
 );
 
 export const successBadge = (props: any) => (

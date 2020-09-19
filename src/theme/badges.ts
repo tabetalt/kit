@@ -1,4 +1,4 @@
-import { Theme } from "theme-ui";
+import { Theme } from 'theme-ui';
 
 const defaultBadge = {
   backgroundColor: 'gray1',

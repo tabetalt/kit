@@ -18,7 +18,7 @@ const ArrowsIcon: React.FC<ArrowsIconProps> = ({ size = 30, ...props }) => (
     viewBox="0 0 30 30"
     {...props}
   >
-    <defs></defs>
+    <defs />
 
     <g id="Group_601" data-name="Group 601">
       <path

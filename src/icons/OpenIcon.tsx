@@ -18,7 +18,7 @@ const OpenIcon: React.FC<OpenIconProps> = ({ size = 30, ...props }) => (
     viewBox="0 0 30 30"
     {...props}
   >
-    <defs></defs>
+    <defs />
 
     <g id="Group_458" data-name="Group 458">
       <g id="_13" data-name={13}>
