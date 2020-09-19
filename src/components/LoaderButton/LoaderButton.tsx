@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, ForwardRef, ButtonProps, Text } from 'theme-ui';
 import { jsx } from 'theme-ui';
-import LoaderIcon from '../LoaderIcon/LoaderIcon';
+import { LoaderIcon } from '../LoaderIcon/LoaderIcon';
 
 export type LoaderButtonOnClickEvent = (
   event: React.FormEvent<HTMLButtonElement>,
@@ -55,5 +55,3 @@ export const LoaderButton: ForwardRef<
     </Button>
   );
 });
-
-export default LoaderButton;

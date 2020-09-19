@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Textarea } from 'theme-ui';
-import Field from './Field';
+import { Field } from './Field';
 
 export default {
   title: 'Field',

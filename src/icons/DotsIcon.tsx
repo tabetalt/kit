@@ -18,7 +18,7 @@ const DotsIcon: React.FC<DotsIconProps> = ({ size = 30, ...props }) => (
     viewBox="0 0 30 30"
     {...props}
   >
-    <defs></defs>
+    <defs />
 
     <circle className="cls-1" cx={16.29} cy={16.29} r={16.29} />
 
