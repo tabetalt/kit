@@ -1,2 +1,3 @@
 import Logo from './Logo/Logo';
-export { Logo };
+import Field from './Field/Field';
+export { Logo, Field };
