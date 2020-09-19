@@ -1,5 +1,5 @@
 import React from 'react';
-import LoaderIcon from './LoaderIcon';
+import { LoaderIcon } from './LoaderIcon';
 
 export default {
   title: 'LoaderIcon',

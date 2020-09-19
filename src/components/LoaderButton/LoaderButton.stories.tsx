@@ -1,5 +1,5 @@
 import React from 'react';
-import LoaderButton, { LoaderButtonProps } from './LoaderButton';
+import { LoaderButton, LoaderButtonProps } from './LoaderButton';
 
 export default {
   title: 'LoaderButton',

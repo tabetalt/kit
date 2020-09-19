@@ -1,5 +1,5 @@
-import Logo from './Logo/Logo';
-import Field from './Field/Field';
-import LoaderIcon from './LoaderIcon/LoaderIcon';
-import LoaderButton from './LoaderButton/LoaderButton';
-export { Logo, Field, LoaderIcon, LoaderButton };
+export * from './Logo/Logo';
+export * from './Field/Field';
+export * from './LoaderIcon/LoaderIcon';
+export * from './LoaderButton/LoaderButton';
+export * from './Skeleton/Skeleton';

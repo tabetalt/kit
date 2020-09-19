@@ -5,7 +5,7 @@ export interface LogoProps extends BoxProps {
   size?: number;
 }
 
-const Logo: React.FC<LogoProps> = ({ size, ...props }) => (
+export const Logo: React.FC<LogoProps> = ({ size, ...props }) => (
   <Box
     as="svg"
     // @ts-expect-error
@@ -27,5 +27,3 @@ const Logo: React.FC<LogoProps> = ({ size, ...props }) => (
     />
   </Box>
 );
-
-export default Logo;
