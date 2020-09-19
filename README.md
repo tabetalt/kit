@@ -4,6 +4,7 @@
 [![Total alerts][lgtm-badge]][lgtm-alerts]
 [![LGTM Grade][lgtm-grade]][lgtm-alerts]
 [![Maintainability][codeclimate-badge]][codeclimate]
+[![npm bundle size][bundle-size]][npm]
 
 ## About
 
@@ -54,6 +55,7 @@ the following places:
 - [Theme UI Components][theme-ui-components]
 
 [banner]: ./assets/banner.jpg
+[npm]: https://www.npmjs.com/package/@tabetalt/kit
 [build-badge]: https://img.shields.io/github/workflow/status/tabetalt/kit/Build%20and%20Deploy
 [storybook]: https://kit.tabetalt.no/
 [storybook-badge]: https://raw.githubusercontent.com/storybookjs/brand/master/badge/badge-storybook.svg
@@ -64,3 +66,4 @@ the following places:
 [lgtm-badge]: https://img.shields.io/lgtm/alerts/g/tabetalt/kit.svg?logo=lgtm&logoWidth=18
 [lgtm-alerts]: https://lgtm.com/projects/g/tabetalt/kit/alerts/
 [lgtm-grade]: https://img.shields.io/lgtm/grade/javascript/github/tabetalt/kit
+[bundle-size]: https://img.shields.io/bundlephobia/min/@tabetalt/kit
