@@ -1,3 +1,17 @@
+# [1.7.0](https://github.com/tabetalt/kit/compare/v1.6.0...v1.7.0) (2020-09-19)
+
+
+### Bug Fixes
+
+* Add missing export ([906c58f](https://github.com/tabetalt/kit/commit/906c58fc2bfa6668bcaed09cc4668ddc86af612b))
+* Fix missing exports ([0b72223](https://github.com/tabetalt/kit/commit/0b72223617341b2445239589558a87570b648346))
+
+
+### Features
+
+* Add LoaderButton and LoaderIcon ([1e24a28](https://github.com/tabetalt/kit/commit/1e24a280a6f4c56af27bc24caea5f502f8b69a1d)), closes [#31](https://github.com/tabetalt/kit/issues/31)
+* Add Skeleton Component ([3ccc22b](https://github.com/tabetalt/kit/commit/3ccc22ba3f5b37b5802488f83812b9bdf1f0b930)), closes [#25](https://github.com/tabetalt/kit/issues/25)
+
 # [1.6.0](https://github.com/tabetalt/kit/compare/v1.5.0...v1.6.0) (2020-09-18)
 
 
