@@ -97,5 +97,8 @@
     "storybook": "start-storybook -p 9009 -s ./assets",
     "build-storybook": "build-storybook -s ./assets",
     "generate": "node scripts/generate-icons.js"
+  },
+  "dependencies": {
+    "react-content-loader": "^5.1.1"
   }
 }
