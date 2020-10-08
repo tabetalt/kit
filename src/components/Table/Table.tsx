@@ -38,7 +38,14 @@ export function Table<D extends object = {}>({
                   // Apply the header cell props
                   <th
                     {...column.getHeaderProps()}
-                    sx={{ p: 3, textAlign: 'left', fontWeight: 'normal' }}
+                    sx={{ 
+                      p: 3, 
+                      textAlign: 'left', 
+                      fontWeight: 'normal',
+                      width: column.width,
+                      minWidth: column.minWidth,
+                      maxWidth: column.maxWidth,
+                    }}
                   >
                     {
                       // Render the header
