@@ -1,3 +1,15 @@
+# [1.9.0](https://github.com/tabetalt/kit/compare/v1.8.0...v1.9.0) (2020-10-08)
+
+
+### Bug Fixes
+
+* **Table:** remove ternary condition for width ([d1eeedd](https://github.com/tabetalt/kit/commit/d1eeedd3201446517dbf75805f3065edb76dbe06))
+
+
+### Features
+
+* **Table:** add ability to set width of column by passing the argument to the Table component ([7026b9f](https://github.com/tabetalt/kit/commit/7026b9f6328a2936640eb065d1e4eb0add87860f))
+
 # [1.8.0](https://github.com/tabetalt/kit/compare/v1.7.0...v1.8.0) (2020-09-19)
 
 
