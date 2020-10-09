@@ -1,27 +1,28 @@
-  .container {
-    border: 2px solid #eee;
-    border-radius: 20px;
-    padding: 18px;
-  }
+.container {
+  border: 2px solid #e4e6ec;
+  border-radius: 20px;
+  padding-left: 19px;
+  padding-top: 10px;
+}
 
-  blockquote {
-    border-left: 2px solid #ddd;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 10px;
-    color: #aaa;
-    font-style: italic;
-  }
-  
-  blockquote[dir='rtl'] {
-    border-left: none;
-    padding-left: 0;
-    padding-right: 10px;
-    border-right: 2px solid #ddd;
-  }
+blockquote {
+  border-left: 2px solid #ddd;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
+  color: #aaa;
+  font-style: italic;
+}
 
-  :not(pre) > code {
-    font-family: monospace;
-    background-color: #eee;
-    padding: 3px;
-  }
+blockquote[dir='rtl'] {
+  border-left: none;
+  padding-left: 0;
+  padding-right: 10px;
+  border-right: 2px solid #ddd;
+}
+
+:not(pre) > code {
+  font-family: monospace;
+  background-color: #eee;
+  padding: 3px;
+}
