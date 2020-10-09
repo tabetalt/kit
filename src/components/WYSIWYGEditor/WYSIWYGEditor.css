@@ -1,8 +1,8 @@
 .container {
-  border: 2px solid #e4e6ec;
-  border-radius: 20px;
-  padding-left: 19px;
-  padding-top: 10px;
+  border: 1px solid #E4E6EC;
+  border-radius: 23px;
+  padding: 10px 19px 0 19px;
+  background-color: #FFFFFF;
 }
 
 blockquote {
