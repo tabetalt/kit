@@ -1,5 +1,8 @@
+/** @jsx jsx */
 import React from 'react';
-import ReactModal, { Props as ModalProps, Styles } from 'react-modal';
+import { jsx } from 'theme-ui';
+import ReactModal, { Props as ReactModalProps, Styles } from 'react-modal';
+import { CloseButton } from '../CloseButton/CloseButton';
 
 export const defaultStyle = {
   overlay: {
@@ -21,13 +24,17 @@ export const defaultStyle = {
     boxShadow: '0px 3px 6px #00000029',
     borderRadius: '9px',
     outline: 'none',
-    padding: '60px 70px',
+    padding: '64px',
     overflow: 'auto',
     WebkitOverflowScrolling: 'touch',
   },
 };
 
-export const Modal: React.FC<ModalProps> = ({ children, ...props }) => (
+export type ModalProps = {
+  header?: React.ReactNode | string;
+} & ReactModalProps;
+
+export const Modal: React.FC<ModalProps> = ({ header, children, ...props }) => (
   <ReactModal
     className="TabetaltModal__Content"
     bodyOpenClassName="TabetaltModal__Body--open"
@@ -37,7 +44,16 @@ export const Modal: React.FC<ModalProps> = ({ children, ...props }) => (
     style={defaultStyle as Styles}
     {...props}
   >
+    {React.isValidElement(header) ? (
+      header
+    ) : header ? (
+      <div sx={{ fontSize: 2, mb: 2 }}>{header}</div>
+    ) : null}
     {children}
+    <CloseButton
+      onClick={props.onRequestClose}
+      sx={{ position: 'absolute', top: 3, right: 3 }}
+    />
   </ReactModal>
 );
 
