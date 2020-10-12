@@ -2,19 +2,19 @@
 /* eslint react/jsx-key: 0 */
 import { useCallback, useMemo, useState } from 'react';
 import { jsx } from 'theme-ui';
-import './WYSIWYGEditor.css';
+import './Editor.css';
 import isHotkey from 'is-hotkey';
 import { Editable, withReact, Slate } from 'slate-react';
 import { createEditor, Node } from 'slate';
 import { withHistory } from 'slate-history';
+import { toggleMark } from './editor-helpers';
 import {
-  BlockButton,
-  Element,
-  Leaf,
-  MarkButton,
-  Toolbar,
-} from './EditorComponents';
-import { toggleMark } from './EditorHelpers';
+  EditorBlockButton,
+  EditorElement,
+  EditorLeaf,
+  EditorMarkButton,
+  EditorToolbar,
+} from './components';
 
 const HOTKEYS: { [key: string]: string } = {
   'mod+b': 'bold',
@@ -24,31 +24,38 @@ const HOTKEYS: { [key: string]: string } = {
 };
 
 export const Editor = (props: any) => {
-  const renderElement = useCallback((props) => <Element {...props} />, []);
-  const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
+  const renderElement = useCallback(
+    (props) => <EditorElement {...props} />,
+    [],
+  );
+  const renderLeaf = useCallback((props) => <EditorLeaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
-  // Keep track of state for the value of the editor.
   const [value, setValue] = useState<Node[]>(props.text);
 
   return (
-    // Add the editable component inside the context.
     <div className="container">
       <Slate
         editor={editor}
         value={value}
         onChange={(newValue) => setValue(newValue)}
       >
-        <Toolbar>
-          <MarkButton format="bold" icon="format_bold" />
-          <MarkButton format="italic" icon="format_italic" />
-          <MarkButton format="underline" icon="format_underlined" />
-          <MarkButton format="code" icon="code" />
-          <BlockButton format="heading-one" icon="looks_one" />
-          <BlockButton format="heading-two" icon="looks_two" />
-          <BlockButton format="block-quote" icon="format_quote" />
-          <BlockButton format="numbered-list" icon="format_list_numbered" />
-          <BlockButton format="bulleted-list" icon="format_list_bulleted" />
-        </Toolbar>
+        <EditorToolbar>
+          <EditorMarkButton format="bold" icon="format_bold" />
+          <EditorMarkButton format="italic" icon="format_italic" />
+          <EditorMarkButton format="underline" icon="format_underlined" />
+          <EditorMarkButton format="code" icon="code" />
+          <EditorBlockButton format="heading-one" icon="looks_one" />
+          <EditorBlockButton format="heading-two" icon="looks_two" />
+          <EditorBlockButton format="block-quote" icon="format_quote" />
+          <EditorBlockButton
+            format="numbered-list"
+            icon="format_list_numbered"
+          />
+          <EditorBlockButton
+            format="bulleted-list"
+            icon="format_list_bulleted"
+          />
+        </EditorToolbar>
         <Editable
           renderElement={renderElement}
           renderLeaf={renderLeaf}

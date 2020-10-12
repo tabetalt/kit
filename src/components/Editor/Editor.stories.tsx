@@ -1,8 +1,8 @@
 import React from 'react';
-import { Editor } from './WYSIWYGEditor';
+import { Editor } from './Editor';
 
 export default {
-  title: 'WYSIWYGEditor',
+  title: 'Editor',
   component: Editor,
   parameters: { actions: { argTypesRegex: '^on.*' } },
 };
