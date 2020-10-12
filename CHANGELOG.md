@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/tabetalt/kit/compare/v1.9.0...v1.10.0) (2020-10-12)
+
+
+### Features
+
+* **Components:** Added basic Modal component ([001015d](https://github.com/tabetalt/kit/commit/001015d78db1b5a41100bc27317cdfbe157264fe))
+* **Components:** Added CloseButton component, improved Modal component ([27810f3](https://github.com/tabetalt/kit/commit/27810f343e43aadf2de9d36d96aeaed691dc29d4))
+
 # [1.9.0](https://github.com/tabetalt/kit/compare/v1.8.0...v1.9.0) (2020-10-08)
 
 
