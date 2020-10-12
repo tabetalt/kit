@@ -5,3 +5,4 @@ export * from './LoaderButton/LoaderButton';
 export * from './Skeleton/Skeleton';
 export * from './Table/Table';
 export * from './Editor/Editor';
+export * from './Modal/Modal';
