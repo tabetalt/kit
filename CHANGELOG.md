@@ -1,3 +1,15 @@
+# [1.11.0](https://github.com/tabetalt/kit/compare/v1.10.0...v1.11.0) (2020-10-12)
+
+
+### Bug Fixes
+
+* **Editor:** Renamed editor ([a20d38e](https://github.com/tabetalt/kit/commit/a20d38ee7624dbe67968448f14b0bce1964bed00))
+
+
+### Features
+
+* **Editor:** Added WYSIWYG editor ([cc131eb](https://github.com/tabetalt/kit/commit/cc131eb74296193cba8d1b7fa632bcbeed804585))
+
 # [1.10.0](https://github.com/tabetalt/kit/compare/v1.9.0...v1.10.0) (2020-10-12)
 
 
