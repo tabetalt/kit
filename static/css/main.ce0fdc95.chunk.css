@@ -1,0 +1,31 @@
+.container {
+  border: 1px solid #e4e6ec;
+  border-radius: 23px;
+  padding: 10px 19px 10px 19px;
+  background-color: #ffffff;
+}
+
+blockquote {
+  border-left: 2px solid #ddd;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 10px;
+  color: #aaa;
+  font-style: italic;
+}
+
+blockquote[dir='rtl'] {
+  border-left: none;
+  padding-left: 0;
+  padding-right: 10px;
+  border-right: 2px solid #ddd;
+}
+
+:not(pre) > code {
+  font-family: monospace;
+  background-color: #eee;
+  padding: 3px;
+}
+
+
+/*# sourceMappingURL=main.ce0fdc95.chunk.css.map*/
