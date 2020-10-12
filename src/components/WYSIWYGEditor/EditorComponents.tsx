@@ -10,7 +10,7 @@ import {
   toggleMark,
 } from './EditorHelpers';
 
-interface BaseProps {
+export interface BaseProps {
   className: string;
   [key: string]: unknown;
 }

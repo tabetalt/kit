@@ -1,14 +1,14 @@
 import React from 'react';
-import { WYSIWYGEditor } from './WYSIWYGEditor';
+import { Editor } from './WYSIWYGEditor';
 
 export default {
   title: 'WYSIWYGEditor',
-  component: WYSIWYGEditor,
+  component: Editor,
   parameters: { actions: { argTypesRegex: '^on.*' } },
 };
 
-export const defaultWYSIWYGEditor = (props: any) => (
-  <WYSIWYGEditor
+export const defaultEditor = (props: any) => (
+  <Editor
     {...props}
     text={[
       {

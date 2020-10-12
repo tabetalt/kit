@@ -23,7 +23,7 @@ const HOTKEYS: { [key: string]: string } = {
   'mod+`': 'code',
 };
 
-export const WYSIWYGEditor = (props: any) => {
+export const Editor = (props: any) => {
   const renderElement = useCallback((props) => <Element {...props} />, []);
   const renderLeaf = useCallback((props) => <Leaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
