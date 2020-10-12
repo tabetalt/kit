@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/tabetalt/kit/compare/v1.11.0...v1.11.1) (2020-10-12)
+
+
+### Bug Fixes
+
+* **Header:** Added header margin bottom. Fixed header font sizes ([f747c85](https://github.com/tabetalt/kit/commit/f747c8521c6cfca48a48815eb13278e2b854fb8d))
+
 # [1.11.0](https://github.com/tabetalt/kit/compare/v1.10.0...v1.11.0) (2020-10-12)
 
 
