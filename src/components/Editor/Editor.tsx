@@ -23,14 +23,26 @@ const HOTKEYS: { [key: string]: string } = {
   'mod+`': 'code',
 };
 
-export const Editor = (props: any) => {
+export type EditorProps = {
+  text: Node[];
+  placeholder?: string;
+  spellCheck?: boolean;
+  autoFocus?: boolean;
+};
+
+export const Editor: React.FC<EditorProps> = ({ 
+  text = [], 
+  placeholder,
+  spellCheck,
+  autoFocus 
+}) => {
   const renderElement = useCallback(
     (props) => <EditorElement {...props} />,
     [],
   );
   const renderLeaf = useCallback((props) => <EditorLeaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
-  const [value, setValue] = useState<Node[]>(props.text);
+  const [value, setValue] = useState<Node[]>(text);
 
   return (
     <div className="container">
@@ -59,9 +71,9 @@ export const Editor = (props: any) => {
         <Editable
           renderElement={renderElement}
           renderLeaf={renderLeaf}
-          placeholder="Enter some rich text…"
-          spellCheck
-          autoFocus
+          placeholder={placeholder}
+          spellCheck={spellCheck}
+          autoFocus={autoFocus}
           onKeyDown={(event) => {
             for (const hotkey in HOTKEYS) {
               if (isHotkey(hotkey, event as any)) {

@@ -3,6 +3,19 @@ import { ReactEditor } from 'slate-react';
 
 const LIST_TYPES = ['numbered-list', 'bulleted-list'];
 
+export const isBlockActive = (editor: ReactEditor, format: any) => {
+  const [match] = Editor.nodes(editor, {
+    match: (n) => n.type === format,
+  });
+
+  return !!match;
+};
+
+export const isMarkActive = (editor: ReactEditor, format: any) => {
+  const marks = Editor.marks(editor);
+  return marks ? marks[format] === true : false;
+};
+
 export const toggleBlock = (editor: ReactEditor, format: any) => {
   const isActive = isBlockActive(editor, format);
   const isList = LIST_TYPES.includes(format);
@@ -30,17 +43,4 @@ export const toggleMark = (editor: ReactEditor, format: any) => {
   } else {
     Editor.addMark(editor, format, true);
   }
-};
-
-export const isBlockActive = (editor: ReactEditor, format: any) => {
-  const [match] = Editor.nodes(editor, {
-    match: (n) => n.type === format,
-  });
-
-  return !!match;
-};
-
-export const isMarkActive = (editor: ReactEditor, format: any) => {
-  const marks = Editor.marks(editor);
-  return marks ? marks[format] === true : false;
 };
