@@ -11,30 +11,36 @@ const styles: Theme['styles'] = {
   },
   h1: {
     variant: 'text.heading',
-    fontSize: 5,
+    fontSize: '4.5rem',
+    marginBottom: '48px',
   },
   h2: {
     variant: 'text.heading',
-    fontSize: 4,
+    fontSize: '3.45rem',
+    marginBottom: '48px',
   },
   h3: {
     variant: 'text.heading',
-    fontSize: 3,
+    fontSize: '2.30rem',
+    marginBottom: '32px',
   },
   h4: {
     variant: 'text.heading',
-    fontSize: 2,
+    fontSize: '1.70rem',
+    marginBottom: '24px',
   },
   h5: {
     variant: 'text.heading',
     fontWeight: 'normal',
-    fontSize: 2,
+    fontSize: '1.70rem',
+    marginBottom: '24px',
   },
   h6: {
     variant: 'text.heading',
     textTransform: 'uppercase',
     fontWeight: 'normal',
-    fontSize: 1,
+    fontSize: '1.14rem',
+    marginBottom: '32px',
   },
   pre: {
     fontFamily: 'monospace',
