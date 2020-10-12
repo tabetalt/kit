@@ -3,10 +3,6 @@ import { ThemeUIStyleObject } from 'theme-ui';
 export default {
   '&.tabetalt-input-tags__wrapper': {
     position: 'relative',
-    //display: 'flex',
-    //border: '1px solid',
-    //borderColor: 'gray1',
-    //borderRadius: '23px',
     fontFamily: 'body',
     '&.disabled': {
       bg: 'highlight',

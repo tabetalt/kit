@@ -60,7 +60,7 @@ export const InputTags: React.FC<InputTagsProps> = (props) => {
           selectedTag: 'tabetalt-input-tags__selected-tag',
           selectedTagName: 'tabetalt-input-tags__selected-tag-name',
           search: 'tabetalt-input-tags__search',
-          // searchWrapper: 'tabetalt-input-tags__search-wrapper',
+          searchWrapper: 'tabetalt-input-tags__search-wrapper',
           searchInput: 'tabetalt-input-tags__search-input',
           suggestions: 'tabetalt-input-tags__suggestions',
           suggestionActive: 'is-active',

@@ -64,9 +64,6 @@ export interface ReactTagsProps {
 }
 
 export interface InputTagsProps extends ReactTagsProps {
-  //tags?: TagProps[];
-  //suggestions?: TagProps[];
-  //allowNew?: boolean;
   onChange?: (v: TagProps[]) => void;
   disabled?: boolean;
   prefix?: React.ReactNode | string;
