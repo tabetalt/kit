@@ -10,8 +10,8 @@ export default {
     px: 3,
     py: '0.812rem',
   },
+
   '.prefilledInput': {
-    width: 'auto',
     fontFamily: 'body',
     border: 'none',
     borderColor: 'inherit',
