@@ -22,6 +22,5 @@ export const prefilledInput = (props: any) => (
     placeholder="Your Site Name"
     prefilledText=".com"
     prefilledTextPosition="right"
-    textWidth="50%"
   />
 );

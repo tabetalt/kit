@@ -1,13 +1,12 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
 import React, { useState } from 'react';
-import './PrefilledInput.css';
 import { Container, Flex, Text, jsx } from 'theme-ui';
 import { PrefilledInputProps, TextPosition } from './prefilled-input-props';
+import styles from './styles';
 
 export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   props,
-  textWidth,
   text,
   prefilledText,
   prefilledTextPosition = TextPosition.RIGHT,
@@ -16,23 +15,11 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   const [value, setValue] = useState<string>(text);
 
   return (
-    <Container
-      sx={{
-        fontFamily: 'body',
-        borderRadius: '23px',
-        border: '1px solid',
-        borderColor: 'gray1',
-        bg: 'white',
-        px: 3,
-        py: '0.812rem',
-      }}
-      {...props}
-    >
+    <Container className="container" sx={{ ...styles }} {...props}>
       {prefilledTextPosition === TextPosition.LEFT && (
         <Flex>
-          <Text sx={{ flex: '1 1 auto', px: 2 }}>{prefilledText}</Text>
+          <Text sx={{ px: 2, flex: '1 1 auto' }}>{prefilledText}</Text>
           <input
-            sx={{ width: textWidth }}
             type="text"
             placeholder={placeholder}
             className="prefilledInput"
@@ -44,14 +31,13 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
       {prefilledTextPosition === TextPosition.RIGHT && (
         <Flex>
           <input
-            sx={{ width: textWidth }}
             type="text"
             placeholder={placeholder}
             className="prefilledInput"
             value={value}
             onChange={(event) => setValue(event.target.value)}
           />
-          <Text sx={{ flex: '1 1 auto', px: 2 }}>{prefilledText}</Text>
+          <Text sx={{ px: 2, flex: '1 1 auto' }}>{prefilledText}</Text>
         </Flex>
       )}
     </Container>
