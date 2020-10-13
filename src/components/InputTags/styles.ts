@@ -3,7 +3,6 @@ import { ThemeUIStyleObject } from 'theme-ui';
 export default {
   '&.tabetalt-input-tags__wrapper': {
     position: 'relative',
-    fontFamily: 'body',
     '&.disabled': {
       bg: 'highlight',
       color: 'muted',
@@ -14,8 +13,6 @@ export default {
       px: 4,
       py: '0.75rem',
       width: '160px',
-      borderRight: '1px solid',
-      borderColor: '#E1E3EA',
       whiteSpace: 'nowrap',
       overflow: 'hidden',
       textOverflow: 'ellipsis',
@@ -23,31 +20,38 @@ export default {
     },
     '.tabetalt-input-tags': {
       width: '100%',
-      px: 4,
+      px: 1,
       position: 'relative',
-      py: '0.35rem',
+      display: 'flex',
+      alignItems: 'center',
       border: '1px solid',
       borderColor: 'gray1',
       borderRadius: '23px',
       bg: 'background',
       '&.is-active,&.is-focused': {
         borderColor: 'gray0',
+        '.tabetalt-input-tags__selected': {
+          borderColor: 'gray0',
+        },
       },
     },
     '&.has-prefix': {
       '.tabetalt-input-tags': {
-        pl: '182px',
+        pl: '160px',
       },
       '.tabetalt-input-tags__suggestions': {
         left: '160px',
         width: 'calc(100% - 160px)',
+      },
+      '.tabetalt-input-tags__selected': {
+        borderLeft: '1px solid',
+        borderColor: '#E1E3EA',
       },
     },
     '.tabetalt-input-tags__search-input': {
       maxWidth: '100%',
       m: 0,
       px: 0,
-      py: '0.35rem',
       border: 0,
       outline: 'none',
       fontSize: 'inherit',
@@ -67,9 +71,13 @@ export default {
       },
     },
     '.tabetalt-input-tags__selected': {
-      display: 'inline',
+      display: 'inline-flex',
+      alignItems: 'center',
+      height: '46px',
+      pl: 3,
     },
     '.tabetalt-input-tags__selected-tag': {
+      fontFamily: 'body',
       display: 'inline-block',
       boxSizing: 'border-box',
       backgroundColor: 'gray1',
