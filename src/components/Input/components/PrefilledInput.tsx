@@ -22,6 +22,11 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
     defaultInputWidth = `${placeholder.length * letterSize}px`;
   }
 
+  let flexGrown = 0;
+  if (prefilledTextPosition === TextPosition.RIGHT && value) {
+    flexGrown = value.length / 1000
+  }
+
   return (
     <Container className="container" sx={{ ...styles }} {...props}>
       <Flex
@@ -44,12 +49,7 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
         </Text>
         <input
           sx={{
-            flexGrow:
-              prefilledTextPosition === TextPosition.RIGHT
-                ? 0
-                : value
-                ? value.length / 1000
-                : 0,
+            flexGrow: flexGrown,
             width: defaultInputWidth,
           }}
           type="text"
