@@ -30,11 +30,11 @@ export type EditorProps = {
   autoFocus?: boolean;
 };
 
-export const Editor: React.FC<EditorProps> = ({ 
-  text = [], 
+export const Editor: React.FC<EditorProps> = ({
+  text = [],
   placeholder,
   spellCheck,
-  autoFocus 
+  autoFocus,
 }) => {
   const renderElement = useCallback(
     (props) => <EditorElement {...props} />,

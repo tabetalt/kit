@@ -8,26 +8,15 @@ export default {
 };
 
 export const defaultEditor = (props: any) => (
-  <Editor
-    {...props}
-    text={textExample}
-  />
+  <Editor {...props} text={textExample} />
 );
 
 export const autoFocusEditor = (props: any) => (
-  <Editor
-    {...props}
-    text={textExample}
-    autoFocus={true}
-  />
+  <Editor {...props} text={textExample} autoFocus={true} />
 );
 
 export const spellCheckEditor = (props: any) => (
-  <Editor
-    {...props}
-    text={textExample}
-    spellCheck={true}
-  />
+  <Editor {...props} text={textExample} spellCheck={true} />
 );
 
 const textExample = [
