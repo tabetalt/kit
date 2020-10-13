@@ -1,3 +1,15 @@
+# [1.12.0](https://github.com/tabetalt/kit/compare/v1.11.1...v1.12.0) (2020-10-13)
+
+
+### Bug Fixes
+
+* **InputTags:** Imporoved styles ([add6ff9](https://github.com/tabetalt/kit/commit/add6ff9cb1a8ab15b81786e6d909aca40ee4ba1b))
+
+
+### Features
+
+* **Components:** Added InputTags component ([a32816e](https://github.com/tabetalt/kit/commit/a32816ee422561847bffe9963d08d40f5ca3834c))
+
 ## [1.11.1](https://github.com/tabetalt/kit/compare/v1.11.0...v1.11.1) (2020-10-12)
 
 
