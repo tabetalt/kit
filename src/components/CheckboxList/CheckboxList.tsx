@@ -16,6 +16,7 @@ export const CheckboxList: ForwardRef<
           <Label>
             <Checkbox
               id={option.id}
+              key={option.id}
               disabled={props.disabled}
               defaultChecked={option.checked}
               onChange={(event) => {
