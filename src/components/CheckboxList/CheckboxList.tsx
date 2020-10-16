@@ -13,10 +13,9 @@ export const CheckboxList: ForwardRef<
     }}>
       {props.options.map((option) => {
         return (
-          <Label>
+          <Label key={option.id}>
             <Checkbox
               id={option.id}
-              key={option.id}
               disabled={props.disabled}
               defaultChecked={option.checked}
               onChange={(event) => {
