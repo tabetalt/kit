@@ -27,7 +27,7 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
       spanRef.current.textContent = text;
     }
     setInputWidth(spanRef.current.offsetWidth + 'px');
-  }, []);
+  }, [placeholder, text, spanRef]);
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // the hidden span takes the value of the input; 
@@ -81,6 +81,7 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
             borderColor: 'inherit',
             boxShadow: 'none',
             padding: 0,
+            borderRadius: 'none'
           }}
           type="text"
           placeholder={placeholder}
