@@ -16,12 +16,17 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   const [inputWidth, setInputWidth] = useState<string>();
 
   useEffect(() => {
-    if(spanRef.current && placeholder) {
+    if(!spanRef.current) {
+      setInputWidth('auto');
+      return;
+    }
+
+    if(placeholder && placeholder.length !== 0) {
       spanRef.current.textContent = placeholder;
-    } else if (spanRef.current && text) {
+    } else if (text && text.length !== 0) {
       spanRef.current.textContent = text;
     }
-    setInputWidth(spanRef.current ? spanRef.current.offsetWidth + 'px' : 'auto');
+    setInputWidth(spanRef.current.offsetWidth + 'px');
   }, []);
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
