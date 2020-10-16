@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /* eslint react/jsx-key: 0 */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Flex, Text, jsx, Input } from 'theme-ui';
 import { PrefilledInputProps, TextPosition } from './prefilled-input-props';
 
@@ -11,20 +11,35 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   prefilledTextPosition = TextPosition.RIGHT,
   placeholder,
 }) => {
+  const spanRef = React.createRef<HTMLSpanElement>();
   const [value, setValue] = useState<string>(text);
-  const letterSize = 8.5;
+  const [inputWidth, setInputWidth] = useState<string>();
 
-  let defaultInputWidth = 'auto';
-  if (value.length !== 0) {
-    defaultInputWidth = `${value.length * letterSize}px`;
-  } else if (placeholder) {
-    defaultInputWidth = `${placeholder.length * letterSize}px`;
-  }
+  useEffect(() => {
+    if(spanRef.current && placeholder) {
+      spanRef.current.textContent = placeholder;
+    } else if (spanRef.current && text) {
+      spanRef.current.textContent = text;
+    }
+    setInputWidth(spanRef.current ? spanRef.current.offsetWidth + 'px' : 'auto');
+  }, []);
 
-  let flexGrow = 0;
-  if (prefilledTextPosition === TextPosition.RIGHT && value) {
-    flexGrow = value.length / 1000
-  }
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // the hidden span takes the value of the input; 
+    if (spanRef.current) {
+      let inputWidth = 'auto';
+      if (event.target.value.length !== 0) {
+        spanRef.current.textContent = event.target.value;
+        inputWidth = spanRef.current.offsetWidth + 'px';
+      } else if (placeholder && placeholder.length !== 0) {
+        spanRef.current.textContent = placeholder;
+        inputWidth = spanRef.current.offsetWidth + 'px';
+      }
+
+      setInputWidth(inputWidth); // apply width of the span to the input
+    }
+    setValue(event.target.value);
+  };
 
   return (
     <Container sx={{ 
@@ -45,6 +60,7 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
       >
         <Text
           sx={{
+            m: '0 5px 0 5px',
             flex:
               prefilledTextPosition === TextPosition.RIGHT
                 ? '1 0 auto'
@@ -55,8 +71,7 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
         </Text>
         <Input
           sx={{
-            flexGrow: flexGrow,
-            width: defaultInputWidth,
+            width: inputWidth,
             border: 'none',
             borderColor: 'inherit',
             boxShadow: 'none',
@@ -65,8 +80,13 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
           type="text"
           placeholder={placeholder}
           value={value}
-          onChange={(event) => setValue(event.target.value)}
+          onChange={onChange}
         />
+        <span ref={spanRef} sx={{
+          position: 'absolute',
+          left: '-9999px',
+          top: '-9999px',
+        }}>{value}</span>
       </Flex>
     </Container>
   );
