@@ -1,19 +1,29 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx } from 'theme-ui';
+import { jsx, ButtonProps } from 'theme-ui';
 import { UploadIcon } from '../../../icons';
 import { Button } from '../../Button/Button';
-import { ButtonProps } from 'theme-ui';
+import { LoaderIcon } from '../../LoaderIcon/LoaderIcon';
 
-export type FileUploadButtonProps = {} & ButtonProps;
+export type FileUploadButtonProps = {
+  loading?: boolean;
+} & ButtonProps;
 
-export const FileUploadButton: React.FC<FileUploadButtonProps> = (props) => (
+export const FileUploadButton: React.FC<FileUploadButtonProps> = ({
+  loading,
+  ...props
+}) => (
   <Button
     variant="outline"
     sx={{ display: 'inline-flex', alignItems: 'center' }}
+    disabled={loading}
     {...props}
   >
     <span>Upload</span>
-    <UploadIcon size={18} sx={{ ml: 2 }} />
+    {!loading ? (
+      <UploadIcon size={16} sx={{ ml: 2 }} />
+    ) : (
+      <LoaderIcon sx={{ height: '1rem', ml: 2 }} />
+    )}
   </Button>
 );

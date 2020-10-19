@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useRef, useState } from 'react';
-import { jsx, Flex } from 'theme-ui';
+import { jsx, Flex, Text } from 'theme-ui';
 import {
   FileUploadButton,
   FileUploadInput,
@@ -19,6 +19,7 @@ export interface FileUploadProps {
   buttonComponent?: React.ReactNode;
   validate?: (file: File) => string | void;
   upload: (files: FileList) => Promise<UploadedFile[]>;
+  remove?: (file: UploadedFile) => void;
 }
 
 const defaultProps = {
@@ -36,10 +37,11 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
     buttonComponent,
     validate,
     upload,
+    remove,
   } = props;
 
-  const [loading, setLoading] = useState(false); // eslint-disable-line @typescript-eslint/no-unused-vars
-  const [errors, setErrors] = useState([] as string[]); // eslint-disable-line @typescript-eslint/no-unused-vars
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState([] as string[]);
 
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -73,25 +75,31 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
     setLoading(false);
   };
 
-  // TODO: add button loading state, add errors render
   return (
-    <label>
-      {buttonComponent || <FileUploadButton onClick={onButtonClick} />}
-      <FileUploadInput
-        id={id}
-        inputRef={inputRef}
-        onChange={onInputChange}
-        accept={accept}
-        multiple={multiple}
-      />
+    <div>
+      <label htmlFor={id}>
+        {buttonComponent || (
+          <FileUploadButton loading={loading} onClick={onButtonClick} />
+        )}
+        <FileUploadInput
+          id={id}
+          inputRef={inputRef}
+          onChange={onInputChange}
+          accept={accept}
+          multiple={multiple}
+        />
+      </label>
+      {errors && errors.length > 0 && (
+        <Text sx={{ color: 'error', mt: 2 }}>{errors.join(' ')}</Text>
+      )}
       {value && value.length > 0 && (
         <Flex>
           {value.map((file, i) => (
-            <FileUploadPreview key={i} file={file} />
+            <FileUploadPreview key={i} file={file} onRemove={remove} />
           ))}
         </Flex>
       )}
-    </label>
+    </div>
   );
 };
 
