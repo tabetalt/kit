@@ -33,7 +33,6 @@ const styles = {
   },
 } as ThemeUIStyleObject;
 
-// TODO: add remove button
 export const FileUploadPreview: React.FC<FileUploadPreviewProps> = ({
   file,
   onRemove,
