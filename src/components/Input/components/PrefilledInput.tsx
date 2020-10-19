@@ -81,7 +81,7 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
             borderColor: 'inherit',
             boxShadow: 'none',
             padding: 0,
-            borderRadius: 'none'
+            borderRadius: 0
           }}
           type="text"
           placeholder={placeholder}
