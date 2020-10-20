@@ -1,0 +1,60 @@
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  outline: 0;
+  padding: 0;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 211px;
+  background-color: #1b202e;
+  color: #fff;
+  font-size: 12px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  margin-left: -20px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  margin-left: -83px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #1b202e transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

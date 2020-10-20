@@ -1,45 +1,13 @@
 /** @jsx jsx */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Text, Container, ForwardRef, jsx } from 'theme-ui';
+import './InfoButton.css';
 import { SettingsIcon } from '../../icons';
-
-const sx = {
-  button: {
-    display: 'flex',
-    alignItems: 'center',
-    textDecoration: 'none',
-    background: '0 0',
-    border: 0,
-    outline: 0,
-    padding: 0,
-    fontSize: 1,
-    cursor: 'pointer',
-    color: 'secondary',
-  },
-  '.infobutton-text-container': {
-    background: '#1B202E',
-    maxWidth: '374px',
-    p: 1,
-  },
-  '.text': {
-    color: 'white',
-    fontSize: '12px',
-  },
-  '.arrow-down': {
-    width: 0,
-    height: 0,
-    borderLeft: '10px solid transparent',
-    borderRight: '10px solid transparent',
-    borderTop: '10px solid #1B202E',
-    ml: 2,
-  },
-};
 
 export const InfoButton: ForwardRef<
   HTMLButtonElement,
   { header: string; content: string }
 > = React.forwardRef(({ header, content, ...props }, ref) => {
-  const [showModal, setShowModal] = useState<boolean>(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -47,10 +15,13 @@ export const InfoButton: ForwardRef<
         wrapperRef.current &&
         !wrapperRef.current.contains(event.target as Node)
       ) {
-        setShowModal(false);
+        var popup = document.getElementById('popup');
+        if (popup) {
+          popup.classList.remove('show');
+        }
       }
     };
-    
+
     document.addEventListener('mousedown', handleClickOutside);
     return () => {
       // Unbind the event listener on clean up
@@ -59,27 +30,25 @@ export const InfoButton: ForwardRef<
   }, [ref]);
 
   return (
-    // TODO: add absolute position
-    <Container sx={sx} ref={wrapperRef}>
-      {showModal && (
-        <div>
-          <div className="infobutton-text-container">
-            <Text className="text" sx={{ fontWeight: 'bold' }}>
-              {header}
-            </Text>
-            <Text className="text">{content}</Text>
-          </div>
-          <div className="arrow-down"></div>
-        </div>
-      )}
-      <Container>
-        <button ref={ref} onClick={() => setShowModal(!showModal)} {...props}>
-          {
-            // TODO: change icon from settings to info
+    <Container ref={wrapperRef}>
+      <button
+        ref={ref}
+        className="popup"
+        onClick={() => {
+          const popup = document.getElementById('popup');
+          if (popup) {
+            popup.classList.toggle('show');
           }
-          <SettingsIcon sx={{ color: '#1B202E', size: '15px', ml: 2 }} />
-        </button>
-      </Container>
+        }}
+      >
+        <SettingsIcon sx={{ color: '#1B202E', size: '15px' }} />
+        <div className="popuptext" id="popup">
+          <Text className="text" sx={{ fontWeight: 'bold' }}>
+            {header}
+          </Text>
+          <Text className="text">{content}</Text>
+        </div>
+      </button>
     </Container>
   );
 });
