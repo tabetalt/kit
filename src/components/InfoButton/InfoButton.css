@@ -18,12 +18,11 @@
   padding: 8px 0;
   position: absolute;
   z-index: 1;
-  bottom: 125%;
   margin-left: -20px;
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
+.popup .popuptext.up::after {
   content: '';
   position: absolute;
   top: 100%;
@@ -31,6 +30,16 @@
   border-width: 5px;
   border-style: solid;
   border-color: #1b202e transparent transparent transparent;
+}
+
+.popup .popuptext.down::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  margin-left: -83px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #1b202e transparent;
 }
 
 /* Toggle this class - hide and show the popup */
