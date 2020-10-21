@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Text, Container, ForwardRef, jsx } from 'theme-ui';
 import './InfoButton.css';
 import { SettingsIcon } from '../../icons';
