@@ -27,7 +27,8 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
       spanRef.current.textContent = text;
     }
     setInputWidth(spanRef.current.offsetWidth + 'px');
-  }, [placeholder, text, spanRef]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [placeholder, text]);
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     // the hidden span takes the value of the input; 
