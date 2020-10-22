@@ -7,10 +7,12 @@ export const CheckboxList: ForwardRef<
   CheckboxListProps
 > = React.forwardRef((props) => {
   return (
-    <Flex sx={{
-      flexWrap: 'wrap',
-      justifyContent: 'flex-start'
-    }}>
+    <Flex
+      sx={{
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+      }}
+    >
       {props.options.map((option) => {
         return (
           <Label key={option.id}>
