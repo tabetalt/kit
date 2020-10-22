@@ -2,7 +2,6 @@
 /* eslint react/jsx-key: 0 */
 import { useCallback, useMemo, useState } from 'react';
 import { jsx } from 'theme-ui';
-import './Editor.css';
 import isHotkey from 'is-hotkey';
 import { Editable, withReact, Slate } from 'slate-react';
 import { createEditor, Node } from 'slate';
@@ -15,6 +14,7 @@ import {
   EditorMarkButton,
   EditorToolbar,
 } from './components';
+import { style } from './style';
 
 const HOTKEYS: { [key: string]: string } = {
   'mod+b': 'bold',
@@ -45,7 +45,7 @@ export const Editor: React.FC<EditorProps> = ({
   const [value, setValue] = useState<Node[]>(text);
 
   return (
-    <div className="container">
+    <div className="container" sx={style}>
       <Slate
         editor={editor}
         value={value}
