@@ -1,3 +1,29 @@
+# [1.13.0](https://github.com/tabetalt/kit/compare/v1.12.0...v1.13.0) (2020-10-20)
+
+
+### Bug Fixes
+
+* **CheckboxList:** Added key property to the checkbox in the list component ([570b9f8](https://github.com/tabetalt/kit/commit/570b9f8ba3885cf3b3a103980288b981c74d94d8))
+* **CheckboxList:** List optimisation with key attr ([70eafc3](https://github.com/tabetalt/kit/commit/70eafc3311c5cdfe427dc9481f6efae57f76903b))
+
+
+### Features
+
+* **CheckboxList:** Added checkbox list component ([8452757](https://github.com/tabetalt/kit/commit/8452757cc121f138223125051f17d70127943ce9))
+* **Switch:** Added switch component ([1865d8e](https://github.com/tabetalt/kit/commit/1865d8e8c893f234991f2878dec165ad4118babe))
+
+# [1.12.0](https://github.com/tabetalt/kit/compare/v1.11.1...v1.12.0) (2020-10-13)
+
+
+### Bug Fixes
+
+* **InputTags:** Imporoved styles ([add6ff9](https://github.com/tabetalt/kit/commit/add6ff9cb1a8ab15b81786e6d909aca40ee4ba1b))
+
+
+### Features
+
+* **Components:** Added InputTags component ([a32816e](https://github.com/tabetalt/kit/commit/a32816ee422561847bffe9963d08d40f5ca3834c))
+
 ## [1.11.1](https://github.com/tabetalt/kit/compare/v1.11.0...v1.11.1) (2020-10-12)
 
 
