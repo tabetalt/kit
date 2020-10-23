@@ -106,7 +106,8 @@
     "storybook": "start-storybook -p 9009 -s ./assets",
     "build-storybook": "build-storybook -s ./assets",
     "generate": "node scripts/generate-icons.js",
-    "lint": "eslint \"src/**/*.ts\""
+    "lint": "eslint \"src/**/*.ts\"",
+    "pretty": "prettier --write ./src"
   },
   "dependencies": {
     "react-content-loader": "^5.1.1",

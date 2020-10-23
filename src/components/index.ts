@@ -9,3 +9,4 @@ export * from './Modal/Modal';
 export * from './InputTags/InputTags';
 export * from './CheckboxList/CheckboxList';
 export * from './Switch/Switch';
+export * from './OptionView/OptionView';

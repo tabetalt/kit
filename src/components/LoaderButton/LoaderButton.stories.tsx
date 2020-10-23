@@ -10,7 +10,8 @@ export default {
         done();
       }, 1000);
     },
-    children: 'Click me!',
+    initialChildren: 'Click me!',
+    completedChildren: 'Completed',
   } as LoaderButtonProps,
   parameters: { actions: { argTypesRegex: '^on.*' } },
 };
