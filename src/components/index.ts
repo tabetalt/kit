@@ -7,3 +7,5 @@ export * from './Table/Table';
 export * from './Editor/Editor';
 export * from './Modal/Modal';
 export * from './InputTags/InputTags';
+export * from './CheckboxList/CheckboxList';
+export * from './Switch/Switch';
