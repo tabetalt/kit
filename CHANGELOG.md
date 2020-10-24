@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/tabetalt/kit/compare/v1.14.0...v1.14.1) (2020-10-24)
+
+
+### Bug Fixes
+
+* Fix issues with dependencies ([713a365](https://github.com/tabetalt/kit/commit/713a365c56aee153eafaf6f01bf9f0cd25d6188f))
+
 # [1.14.0](https://github.com/tabetalt/kit/compare/v1.13.0...v1.14.0) (2020-10-24)
 
 
