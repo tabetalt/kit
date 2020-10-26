@@ -16,7 +16,7 @@ export const errorInput = (props: any) => (
   <Field variant="error" label="Field" name="field" />
 );
 export const disabledInput = () => <Input disabled />;
-export const prefilledInput = (props: any) => (
+export const prefilledInputWithLabel = (props: any) => (
   <PrefilledInput
     {...props}
     placeholder="Your Site Name"
@@ -24,5 +24,13 @@ export const prefilledInput = (props: any) => (
     prefilledTextPosition="right"
     label="Produktnavn"
     name="name"
+  />
+);
+export const prefilledInputWithoutLabel = (props: any) => (
+  <PrefilledInput
+    {...props}
+    placeholder="Your Site Name"
+    prefilledText=".com"
+    prefilledTextPosition="right"
   />
 );
