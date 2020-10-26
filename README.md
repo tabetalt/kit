@@ -17,11 +17,16 @@ Our intentions are to stylize according to _Tabetalt Designsystem_ on all [Theme
 All components are included in one package. Install it as such:
 
 ```shell
-▶ yarn install @tabetalt/kit
+▶ yarn add @tabetalt/kit
 ```
 
-**Remember to include Google Fonts** No fonts are packaged with the library. Therefore, you'll need
-to add a Link to it, as such:
+Install necessary peer dependencies.
+
+```shell
+▶ yarn add theme-ui@next
+```
+
+**Remember to include Google Fonts** No fonts are packaged with the library. Therefore, you'll need to add a Link to it, as such:
 
 ```html
 <link

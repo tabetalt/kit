@@ -1,3 +1,32 @@
+## [1.14.1](https://github.com/tabetalt/kit/compare/v1.14.0...v1.14.1) (2020-10-24)
+
+
+### Bug Fixes
+
+* Fix issues with dependencies ([713a365](https://github.com/tabetalt/kit/commit/713a365c56aee153eafaf6f01bf9f0cd25d6188f))
+
+# [1.14.0](https://github.com/tabetalt/kit/compare/v1.13.0...v1.14.0) (2020-10-24)
+
+
+### Bug Fixes
+
+* **Editor:** removed css style and added sx prop ([b4f17af](https://github.com/tabetalt/kit/commit/b4f17affe702f98685cbaaf170244b1bf49d5230))
+* **export:** fixed exports from components ([022f3c8](https://github.com/tabetalt/kit/commit/022f3c81abda5c29b14be785307f14ee53d5512e))
+* **PreffiledInput:** Added flex direction for container. Added moving preffiled text ([3f1e4e4](https://github.com/tabetalt/kit/commit/3f1e4e46a78aee8e2800c2e61bc83c1af77a88f7))
+* **PreffiledInput:** Changed input to theme-ui ([0a21cb9](https://github.com/tabetalt/kit/commit/0a21cb935955389eb4e795078197dffab6fa3bbd))
+* **PreffiledInput:** fixed moving prefilled text ([28f442e](https://github.com/tabetalt/kit/commit/28f442e0941a70475152dc074505a1dd9be6db26))
+* **PrefilledInput:** Added hook for counting content length. ([db1cdee](https://github.com/tabetalt/kit/commit/db1cdee26e213ad13679c4be4492ddd990b3afd6))
+* **PrefilledInput:** Fix check statement for ref ([7f38903](https://github.com/tabetalt/kit/commit/7f389036a53ae59924bf71951b3be6e4e4f6adac))
+* **PrefilledInput:** Fixed border radius ([8d0d119](https://github.com/tabetalt/kit/commit/8d0d119b8c1d39747a8c3aa511280e9004d83bd1))
+* **PrefilledInput:** Fixed css file with sx ([72f7086](https://github.com/tabetalt/kit/commit/72f70863569f428786fac03742925316d3911508))
+* **PrefilledInput:** Fixed flex grow for input ([bfe2ddb](https://github.com/tabetalt/kit/commit/bfe2ddb79ce65e549ff53a1a2b1b2246f42afe4b))
+
+
+### Features
+
+* **OptionView:** Added view for showing options ([7164ec3](https://github.com/tabetalt/kit/commit/7164ec3e1c4f470496552f831419702ee83b0a6d))
+* **PrefilledInput:** Added new prefilled input component. Code cleaning by lint command ([cdc5aa5](https://github.com/tabetalt/kit/commit/cdc5aa578dcbf7a5fc6a3464fb35be87c6050ab1))
+
 # [1.13.0](https://github.com/tabetalt/kit/compare/v1.12.0...v1.13.0) (2020-10-20)
 
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Input, Field } from 'theme-ui';
+import { PrefilledInput } from './components/PrefilledInput';
 
 export default {
   title: 'Input',
@@ -15,3 +16,11 @@ export const errorInput = (props: any) => (
   <Field variant="error" label="Field" name="field" />
 );
 export const disabledInput = () => <Input disabled />;
+export const prefilledInput = (props: any) => (
+  <PrefilledInput
+    {...props}
+    placeholder="Your Site Name"
+    prefilledText=".com"
+    prefilledTextPosition="right"
+  />
+);
