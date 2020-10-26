@@ -16,12 +16,12 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   const [inputWidth, setInputWidth] = useState<string>();
 
   useEffect(() => {
-    if(!spanRef.current) {
+    if (!spanRef.current) {
       setInputWidth('auto');
       return;
     }
 
-    if(placeholder && placeholder.length !== 0) {
+    if (placeholder && placeholder.length !== 0) {
       spanRef.current.textContent = placeholder;
     } else if (text && text.length !== 0) {
       spanRef.current.textContent = text;
@@ -31,7 +31,7 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   }, [placeholder, text]);
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // the hidden span takes the value of the input; 
+    // the hidden span takes the value of the input;
     if (spanRef.current) {
       let inputWidth = 'auto';
       if (event.target.value.length !== 0) {
@@ -48,14 +48,17 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   };
 
   return (
-    <Container sx={{ 
-      borderRadius: '23px',
-      border: '1px solid',
-      borderColor: 'gray1',
-      bg: 'white',
-      px: 3,
-      py: '0.812rem',
-     }} {...props}>
+    <Container
+      sx={{
+        borderRadius: '23px',
+        border: '1px solid',
+        borderColor: 'gray1',
+        bg: 'white',
+        px: 3,
+        py: '0.812rem',
+      }}
+      {...props}
+    >
       <Flex
         sx={{
           flexDirection:
@@ -82,18 +85,23 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
             borderColor: 'inherit',
             boxShadow: 'none',
             padding: 0,
-            borderRadius: 0
+            borderRadius: 0,
           }}
           type="text"
           placeholder={placeholder}
           value={value}
           onChange={onChange}
         />
-        <span ref={spanRef} sx={{
-          position: 'absolute',
-          left: '-9999px',
-          top: '-9999px',
-        }}>{value}</span>
+        <span
+          ref={spanRef}
+          sx={{
+            position: 'absolute',
+            left: '-9999px',
+            top: '-9999px',
+          }}
+        >
+          {value}
+        </span>
       </Flex>
     </Container>
   );

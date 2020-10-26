@@ -5,11 +5,10 @@ export default {
   title: 'Switch',
   component: Switch,
   args: {
-    label: '',
+    label: 'Enable email alerts?',
+    name: 'alert',
   },
   parameters: { actions: { argTypesRegex: '^on.*' } },
 };
 
-export const defaultSwitch = (props: any) => (
-  <Switch label="Enable email alerts?" {...props} />
-);
+export const defaultSwitch = (props: any) => <Switch {...props} />;
