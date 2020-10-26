@@ -11,11 +11,11 @@ export const CheckboxList: ForwardRef<
       flexWrap: 'wrap',
       justifyContent: 'flex-start'
     }}>
-      {props.options.map((option) => {
+      {props.options.map((option, index) => {
         return (
-          <Label key={option.id}>
+          <Label key={option.id ? option.id : index}>
             <Checkbox
-              id={option.id}
+              id={option.id ? option.id : index.toString()}
               disabled={props.disabled}
               defaultChecked={option.checked}
               onChange={(event) => {

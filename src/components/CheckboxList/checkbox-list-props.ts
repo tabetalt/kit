@@ -1,5 +1,5 @@
 export interface CheckboxOption {
-  id: string;
+  id?: string;
   value: string;
   checked: boolean;
 }
