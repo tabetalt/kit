@@ -4,9 +4,10 @@ export enum TextPosition {
 }
 
 export interface PrefilledInputProps {
-  props: { [key: string]: any }[];
+  label?: string;
+  name?: string;
   text?: string;
   prefilledText: string;
-  prefilledTextPosition: TextPosition;
+  prefilledTextPosition: TextPosition | string;
   placeholder?: string;
 }

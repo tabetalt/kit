@@ -22,5 +22,7 @@ export const prefilledInput = (props: any) => (
     placeholder="Your Site Name"
     prefilledText=".com"
     prefilledTextPosition="right"
+    label="Produktnavn"
+    name="name"
   />
 );
