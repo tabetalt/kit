@@ -14,6 +14,8 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
   ...props
 }) => {
   const spanRef = React.createRef<HTMLSpanElement>();
+  const inputRef = React.createRef<HTMLInputElement>();
+  const [focused, setFocus] = useState<boolean>(false);
   const [value, setValue] = useState<string>(text);
   const [inputWidth, setInputWidth] = useState<string>();
 
@@ -51,23 +53,25 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
 
   return (
     <Flex sx={{ alignItems: 'center' }}>
-      { name && label && <Label
-        htmlFor={name}
-        sx={{ width: 'auto', minWidth: '8.75rem', flexGrow: 1 }}
-      >
-        {label}
-      </Label>
-      }
+      {name && label && (
+        <Label
+          htmlFor={name}
+          sx={{ width: 'auto', minWidth: '8.75rem', flexGrow: 1 }}
+        >
+          {label}
+        </Label>
+      )}
       <Container
         sx={{
+          cursor: 'pointer',
           borderRadius: '23px',
           border: '1px solid',
-          borderColor: 'gray1',
+          borderColor: focused || value.length !== 0 ? 'gray0' : 'gray1',
           px: 3,
           py: '0.812rem',
           flexGrow: 3,
         }}
-        {...props}
+        onClick={() => inputRef.current?.focus()}
       >
         <Flex
           sx={{
@@ -97,10 +101,14 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
               padding: 0,
               borderRadius: 0,
             }}
+            ref={inputRef}
             type="text"
             placeholder={placeholder}
             value={value}
             onChange={onChange}
+            onFocus={() => setFocus(true)}
+            onBlur={() => setFocus(false)}
+            {...props}
           />
           <span
             ref={spanRef}
