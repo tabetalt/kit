@@ -1,3 +1,16 @@
+# [1.15.0](https://github.com/tabetalt/kit/compare/v1.14.2...v1.15.0) (2020-10-27)
+
+
+### Bug Fixes
+
+* **PrefilledInput:** fixed export statement ([37a7b0c](https://github.com/tabetalt/kit/commit/37a7b0cba0c7134d5573732aa127516baa1f9343))
+
+
+### Features
+
+* **PrefilledInput:** added condition for label ([5cc245b](https://github.com/tabetalt/kit/commit/5cc245bdf0c7f4944be4253fbdbbd1fbf54fa473))
+* **PrefilledInput:** added label before input ([640a0ad](https://github.com/tabetalt/kit/commit/640a0ad7e6b82f7f1412b3d9c0cdb002a4bdde52))
+
 ## [1.14.2](https://github.com/tabetalt/kit/compare/v1.14.1...v1.14.2) (2020-10-27)
 
 
