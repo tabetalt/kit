@@ -25,6 +25,7 @@ const HOTKEYS: { [key: string]: string } = {
 
 export type EditorProps = {
   text?: Node[];
+  toolbar?: boolean;
   placeholder?: string;
   spellCheck?: boolean;
   autoFocus?: boolean;
@@ -35,6 +36,7 @@ export const Editor: React.FC<EditorProps> = ({
     type: 'paragraph',
     children: [ { text: '' }],
   }],
+  toolbar = true,
   placeholder,
   spellCheck,
   autoFocus,
@@ -55,23 +57,24 @@ export const Editor: React.FC<EditorProps> = ({
           value={value}
           onChange={(newValue) => setValue(newValue)}
         >
-          <EditorToolbar>
-            <EditorMarkButton format="bold" icon="format_bold" />
-            <EditorMarkButton format="italic" icon="format_italic" />
-            <EditorMarkButton format="underline" icon="format_underlined" />
-            <EditorMarkButton format="code" icon="code" />
-            <EditorBlockButton format="heading-one" icon="looks_one" />
-            <EditorBlockButton format="heading-two" icon="looks_two" />
-            <EditorBlockButton format="block-quote" icon="format_quote" />
-            <EditorBlockButton
-              format="numbered-list"
-              icon="format_list_numbered"
-            />
-            <EditorBlockButton
-              format="bulleted-list"
-              icon="format_list_bulleted"
-            />
-          </EditorToolbar>
+          {toolbar && (<EditorToolbar>
+              <EditorMarkButton format="bold" icon="format_bold" />
+              <EditorMarkButton format="italic" icon="format_italic" />
+              <EditorMarkButton format="underline" icon="format_underlined" />
+              <EditorMarkButton format="code" icon="code" />
+              <EditorBlockButton format="heading-one" icon="looks_one" />
+              <EditorBlockButton format="heading-two" icon="looks_two" />
+              <EditorBlockButton format="block-quote" icon="format_quote" />
+              <EditorBlockButton
+                format="numbered-list"
+                icon="format_list_numbered"
+              />
+              <EditorBlockButton
+                format="bulleted-list"
+                icon="format_list_bulleted"
+              />
+            </EditorToolbar>
+          )}
           <Editable
             renderElement={renderElement}
             renderLeaf={renderLeaf}
