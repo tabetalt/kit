@@ -1,3 +1,10 @@
+## [1.14.2](https://github.com/tabetalt/kit/compare/v1.14.1...v1.14.2) (2020-10-27)
+
+
+### Bug Fixes
+
+* **CheckboxList:** fixed key parameter with default id ([7115109](https://github.com/tabetalt/kit/commit/7115109ab271a9819d9635199ce7565e98806e18))
+
 ## [1.14.1](https://github.com/tabetalt/kit/compare/v1.14.0...v1.14.1) (2020-10-24)
 
 
