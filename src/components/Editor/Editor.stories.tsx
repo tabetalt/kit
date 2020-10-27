@@ -8,7 +8,7 @@ export default {
 };
 
 export const defaultEditor = (props: any) => (
-  <Editor {...props} text={textExample} />
+  <Editor {...props} />
 );
 
 export const autoFocusEditor = (props: any) => (
