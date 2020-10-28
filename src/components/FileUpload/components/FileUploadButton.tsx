@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import React from 'react';
-import { jsx, ButtonProps } from 'theme-ui';
+import { jsx, ButtonProps, Button } from 'theme-ui';
 import { UploadIcon } from '../../../icons';
-import { Button } from '../../Button/Button';
 import { LoaderIcon } from '../../LoaderIcon/LoaderIcon';
 
 export type FileUploadButtonProps = {
