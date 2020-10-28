@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/tabetalt/kit/compare/v1.15.0...v1.16.0) (2020-10-28)
+
+
+### Features
+
+* **LabeledSelect:** added select comp with label ([1534111](https://github.com/tabetalt/kit/commit/15341119a8fa1903f0f24cb8ea61a4130aa65af1))
+
 # [1.15.0](https://github.com/tabetalt/kit/compare/v1.14.2...v1.15.0) (2020-10-27)
 
 
