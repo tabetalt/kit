@@ -1,5 +1,6 @@
 import React from 'react';
 import { Select } from 'theme-ui';
+import { LabeledSelect } from './LabeledSelect';
 
 export default {
   title: 'Select',
@@ -18,4 +19,10 @@ export const disabledSelect = () => (
     <option>Hello</option>
     <option>World</option>
   </Select>
+);
+export const labeledSelect = (props: any) => (
+  <LabeledSelect {...props} label="Some text">
+    <option>Hello</option>
+    <option>World</option>
+  </LabeledSelect>
 );

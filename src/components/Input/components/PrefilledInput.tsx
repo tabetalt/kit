@@ -51,13 +51,14 @@ export const PrefilledInput: React.FC<PrefilledInputProps> = ({
 
   return (
     <Flex sx={{ alignItems: 'center' }}>
-      { name && label && <Label
-        htmlFor={name}
-        sx={{ width: 'auto', minWidth: '8.75rem', flexGrow: 1 }}
-      >
-        {label}
-      </Label>
-      }
+      {name && label && (
+        <Label
+          htmlFor={name}
+          sx={{ width: 'auto', minWidth: '8.75rem', flexGrow: 1 }}
+        >
+          {label}
+        </Label>
+      )}
       <Container
         sx={{
           borderRadius: '23px',
