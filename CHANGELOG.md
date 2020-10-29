@@ -1,3 +1,17 @@
+# [1.18.0](https://github.com/tabetalt/kit/compare/v1.17.0...v1.18.0) (2020-10-29)
+
+
+### Bug Fixes
+
+* **FileUpload:** removed unnecessary button file ([c609948](https://github.com/tabetalt/kit/commit/c6099487227d03af56a5ccfa8cd02a0c410fb627))
+* **LabeledSelect:** fix export with labeled select ([598912b](https://github.com/tabetalt/kit/commit/598912b53b7a2cb6dc294be05320c4d52302d44a))
+
+
+### Features
+
+* **FileUpload:** Added basic FileUpload compinent ([2a96f56](https://github.com/tabetalt/kit/commit/2a96f566eb65e61d3b7988d0f22fb84968c1743d))
+* **FileUpload:** Improved FileUpload component, added strories ([463aa8a](https://github.com/tabetalt/kit/commit/463aa8a94394d8147aedd22ba7196db63c8f0857))
+
 # [1.17.0](https://github.com/tabetalt/kit/compare/v1.16.0...v1.17.0) (2020-10-29)
 
 
