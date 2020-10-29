@@ -1,3 +1,17 @@
+# [1.17.0](https://github.com/tabetalt/kit/compare/v1.16.0...v1.17.0) (2020-10-29)
+
+
+### Bug Fixes
+
+* **Editor:** fixed editor border style ([357d1d3](https://github.com/tabetalt/kit/commit/357d1d3a86953d328d0a26fb13b57fa179036efe))
+* **Field:** fixed field alignment ([92b915b](https://github.com/tabetalt/kit/commit/92b915bb4486d23e333bff8c6a1f6bfaa1a3f7ab))
+* **PrefilledInput:** fixed focus to element ([4707f44](https://github.com/tabetalt/kit/commit/4707f44f9c1815713d23db1a66a2e5fd369b5cab))
+
+
+### Features
+
+* **Editor:** added logic for hiding toolbar ([76681f8](https://github.com/tabetalt/kit/commit/76681f89246a5d8f69d7b48b319990587afd97eb))
+
 # [1.16.0](https://github.com/tabetalt/kit/compare/v1.15.0...v1.16.0) (2020-10-28)
 
 
