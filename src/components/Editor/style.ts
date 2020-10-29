@@ -1,6 +1,6 @@
 export const style = {
   '.container': {
-    border: '1px solid #e4e6ec',
+    border: '1px solid gray1',
     borderRadius: '23px',
     padding: '10px 19px 10px 19px',
     backgroundColor: '#ffffff',
