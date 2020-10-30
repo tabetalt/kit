@@ -2,12 +2,16 @@ import React from 'react';
 import { Label, Input, ForwardRef, FieldProps, Flex } from 'theme-ui';
 import { getMargin, omitMargin } from '../util';
 
+export interface FieldsProps extends FieldProps<any> {
+  alignItems?: string;
+}
+
 export const Field: ForwardRef<
   HTMLDivElement,
-  FieldProps<any>
-> = React.forwardRef(({ as: Control = Input, label, name, ...props }, ref) => {
+  FieldsProps
+> = React.forwardRef(({ as: Control = Input, label, name, alignItems = 'center', ...props }, ref) => {
   return (
-    <Flex {...getMargin(props)} sx={{ alignItems: 'flex-start' }}>
+    <Flex {...getMargin(props)} sx={{ alignItems: alignItems }}>
       <Label
         htmlFor={name}
         sx={{ width: 'auto', minWidth: '8.75rem', flexGrow: 1 }}
