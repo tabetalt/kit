@@ -8,7 +8,11 @@ export default {
 };
 
 export const defaultEditor = (props: any) => (
-  <Editor {...props} text={textExample} />
+  <Editor {...props} />
+);
+
+export const withoutToolbarEditor = (props: any) => (
+  <Editor {...props} toolbar={false}/>
 );
 
 export const autoFocusEditor = (props: any) => (

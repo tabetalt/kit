@@ -1,6 +1,6 @@
 import React from 'react';
 import { Select } from 'theme-ui';
-import { LabeledSelect } from './LabeledSelect';
+import { LabeledSelect } from './components/LabeledSelect';
 
 export default {
   title: 'Select',

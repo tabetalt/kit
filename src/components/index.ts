@@ -12,3 +12,4 @@ export * from './Switch/Switch';
 export * from './OptionView/OptionView';
 export * from './Input/components/PrefilledInput';
 export * from './StatusLabel/StatusLabel';
+export * from './Select/components/LabeledSelect';
