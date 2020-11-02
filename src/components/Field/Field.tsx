@@ -11,7 +11,7 @@ export const Field: ForwardRef<
   FieldsProps
 > = React.forwardRef(({ as: Control = Input, label, name, alignItems = 'center', ...props }, ref) => {
   return (
-    <Flex {...getMargin(props)} sx={{ alignItems: alignItems }}>
+    <Flex {...getMargin(props)} sx={{ alignItems }}>
       <Label
         htmlFor={name}
         sx={{ width: 'auto', minWidth: '8.75rem', flexGrow: 1 }}

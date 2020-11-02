@@ -8,7 +8,7 @@ export default {
 };
 
 export const activeStatusLabel = (props: any) => (
-  <StatusLabel label="Active" active={true} {...props} />
+  <StatusLabel label="Active" active {...props} />
 );
 
 export const inactiveStatusLabel = (props: any) => (
