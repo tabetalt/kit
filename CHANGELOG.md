@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/tabetalt/kit/compare/v1.19.0...v1.19.1) (2020-11-06)
+
+
+### Bug Fixes
+
+* **Button:** Improved Button, IconButton styles ([a64087e](https://github.com/tabetalt/kit/commit/a64087e366c2688921258d03fb1c9f91f773eba9))
+
 # [1.19.0](https://github.com/tabetalt/kit/compare/v1.18.0...v1.19.0) (2020-11-06)
 
 
