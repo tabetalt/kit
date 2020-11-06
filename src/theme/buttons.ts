@@ -13,7 +13,7 @@ const buttons: Theme['buttons'] = {
       bg: '#E39256',
     },
     '&:disabled,&[disabled]': {
-      cursor: 'default',
+      cursor: 'not-allowed',
       bg: 'highlight',
       color: 'muted',
     },
@@ -38,7 +38,7 @@ const buttons: Theme['buttons'] = {
       boxShadow: 'inset 0 0 0 3px var(--theme-ui-colors-secondary, #FFA665)',
     },
     '&:disabled,&[disabled]': {
-      cursor: 'default',
+      cursor: 'not-allowed',
       bg: 'highlight',
       boxShadow: 'inset 0 0 0 3px var(--theme-ui-colors-muted, #9AA0B5)',
       color: 'muted',
@@ -61,7 +61,7 @@ const buttons: Theme['buttons'] = {
       bg: 'gray2',
     },
     '&:disabled,&[disabled]': {
-      cursor: 'default',
+      cursor: 'not-allowed',
       bg: 'highlight',
       boxShadow: 'inset 0 0 0 3px var(--theme-ui-colors-error, #E03B54)',
       color: 'muted',
@@ -81,8 +81,16 @@ const buttons: Theme['buttons'] = {
       bg: '#CB374D',
     },
     '&:disabled,&[disabled]': {
-      cursor: 'default',
+      cursor: 'not-allowed',
       bg: 'highlight',
+      color: 'muted',
+    },
+  },
+  icon: {
+    outline: 'none',
+    cursor: 'pointer',
+    '&:disabled,&[disabled]': {
+      cursor: 'not-allowed',
       color: 'muted',
     },
   },
