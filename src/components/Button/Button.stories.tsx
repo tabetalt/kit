@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from 'theme-ui';
+import { Button, IconButton } from 'theme-ui';
+import { BoxIcon } from '../../icons';
 
 export default {
   title: 'Button',
@@ -10,10 +11,13 @@ export default {
 export const defaultButton = (props: any) => (
   <Button {...props}>Default button</Button>
 );
+
 export const outlineButton = () => (
   <Button variant="outline">Outline button</Button>
 );
+
 export const disabledButton = () => <Button disabled>Default button</Button>;
+
 export const disabledOutlineButton = () => (
   <Button variant="outline" disabled>
     Outline button
@@ -26,4 +30,13 @@ export const warningButton = () => (
 
 export const destructiveButton = () => (
   <Button variant="destructive">Welcome to the danger zone</Button>
+);
+
+export const iconButton = () => (
+  <IconButton><BoxIcon /></IconButton>
+);
+export const disabledIconButton = () => (
+  <IconButton disabled>
+    <BoxIcon />
+  </IconButton>
 );
