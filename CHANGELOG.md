@@ -1,3 +1,18 @@
+# [1.19.0](https://github.com/tabetalt/kit/compare/v1.18.0...v1.19.0) (2020-11-06)
+
+
+### Bug Fixes
+
+* **Field:** changed props  passing ([9b60f9a](https://github.com/tabetalt/kit/commit/9b60f9a8027fb3f58b7926f856586718d7245e2f))
+* **Field:** fixed filed alignment ([95111a1](https://github.com/tabetalt/kit/commit/95111a12cbe19cfb5e63b73fc8ba3a27f9999c60))
+* **FileUpload:** fixed export from FileUpload component ([da790f0](https://github.com/tabetalt/kit/commit/da790f0373c9b8817b630409766d43dd65faec7f))
+* **Theme:** changes bg color ([8a35781](https://github.com/tabetalt/kit/commit/8a35781226390eeca281738529770b35edf66c57))
+
+
+### Features
+
+* **StatusLabel:** added status label component ([94575b2](https://github.com/tabetalt/kit/commit/94575b2c53033323f402546800a09a65db352cbb))
+
 # [1.18.0](https://github.com/tabetalt/kit/compare/v1.17.0...v1.18.0) (2020-10-29)
 
 
