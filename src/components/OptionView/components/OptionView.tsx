@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
 import { Button, Container, Flex, Text, jsx } from 'theme-ui';
-import EyeIcon from '../../icons/EyeIcon';
-import { LoaderButton } from '../LoaderButton/LoaderButton';
+import EyeIcon from '../../../icons/EyeIcon';
+import { LoaderButton } from '../../LoaderButton/LoaderButton';
 import { OptionViewProps } from './option-view-props';
 
 export const OptionView: React.FC<OptionViewProps> = ({
@@ -33,7 +33,7 @@ export const OptionView: React.FC<OptionViewProps> = ({
     >
       <Text
         sx={{
-          color: '#9AA0B5',
+          color: 'gray0',
           font: 'normal normal normal 15px/20px DM Sans',
           marginBottom: '15px',
         }}
@@ -42,7 +42,7 @@ export const OptionView: React.FC<OptionViewProps> = ({
       </Text>
       <Container
         sx={{
-          border: selected ? '3px solid #00CD98' : '1px solid #9AA0B5;',
+          border: selected ? '3px solid #00CD98' : '1px solid gray0;',
           borderRadius: '20px',
           width: '317px',
           height: '312px',

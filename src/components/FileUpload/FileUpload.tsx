@@ -52,13 +52,16 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
       return;
     }
     if (validate) {
-      const validationErrors = Array.from(filesToUpload).reduce((acc: string[], file) => {
-        const err = validate(file);
-        if (err) {
-          acc.push(err);
-        }
-        return acc;
-      }, []);
+      const validationErrors = Array.from(filesToUpload).reduce(
+        (acc: string[], file) => {
+          const err = validate(file);
+          if (err) {
+            acc.push(err);
+          }
+          return acc;
+        },
+        [],
+      );
       if (validationErrors.length) {
         setErrors(validationErrors);
         return;

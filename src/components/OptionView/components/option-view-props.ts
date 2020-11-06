@@ -5,6 +5,6 @@ export interface OptionViewProps {
   loadingText: string;
   completedText: string;
   previewText: string;
-  onSelectClick?: (event: React.FormEvent, done: () => void) => void;
-  onPreviewClick?: (event: React.FormEvent) => void;
+  onSelectClick?: (event: React.FormEvent<Element>, done: () => void) => void;
+  onPreviewClick?: (event: React.FormEvent<Element>) => void;
 }
