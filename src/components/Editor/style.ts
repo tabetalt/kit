@@ -1,7 +1,6 @@
 export const style = {
-  '.editor-container': {
-    minHeight: '121px',
-    border: '1px solid #e4e6ec',
+  '.container': {
+    border: '1px solid gray1',
     borderRadius: '23px',
     padding: '10px 19px 10px 19px',
     backgroundColor: '#ffffff',

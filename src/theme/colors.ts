@@ -2,7 +2,7 @@ import { Theme } from 'theme-ui';
 
 const colors: Theme['colors'] = {
   text: '#1B202E',
-  background: '#F6F6F9',
+  background: '#FFF',
   primary: '#FFA665',
   secondary: '#1B202E',
   accent: '#2B40B5',
