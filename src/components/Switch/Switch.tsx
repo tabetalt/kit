@@ -30,7 +30,8 @@ export const Switch: ForwardRef<
           padding: 0,
           position: 'relative',
           bg: 'white',
-          border: '2px solid gray0',
+          border: '2px solid',
+          borderColor: 'gray0',
           borderRadius: '15px',
           height: '31px',
           width: '67px',
@@ -54,7 +55,8 @@ export const Switch: ForwardRef<
           },
           'input:checked ~ &': {
             bg: 'success',
-            border: '2px solid success',
+            border: '2px solid',
+            borderColor: 'success',
             '> div': {
               transform: 'translateX(155%)',
               bg: 'white',
