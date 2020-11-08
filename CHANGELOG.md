@@ -1,3 +1,10 @@
+## [1.19.2](https://github.com/tabetalt/kit/compare/v1.19.1...v1.19.2) (2020-11-08)
+
+
+### Bug Fixes
+
+* **switch:** fixed switch colors ([1d26ccc](https://github.com/tabetalt/kit/commit/1d26ccc16e147435e93ebb9a447a54e310f846f9))
+
 ## [1.19.1](https://github.com/tabetalt/kit/compare/v1.19.0...v1.19.1) (2020-11-06)
 
 
