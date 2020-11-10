@@ -1,3 +1,10 @@
+## [1.19.3](https://github.com/tabetalt/kit/compare/v1.19.2...v1.19.3) (2020-11-10)
+
+
+### Bug Fixes
+
+* **editor:** fixed editor border color ([0a9b842](https://github.com/tabetalt/kit/commit/0a9b842d8180cecfbea0e6bda9df676054714f84))
+
 ## [1.19.2](https://github.com/tabetalt/kit/compare/v1.19.1...v1.19.2) (2020-11-08)
 
 
