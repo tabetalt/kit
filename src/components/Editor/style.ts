@@ -1,6 +1,7 @@
 export const style = {
-  '.container': {
-    border: '1px solid gray1',
+  '.editor-container': {
+    border: '1px solid',
+    borderColor: 'gray1',
     borderRadius: '23px',
     padding: '10px 19px 10px 19px',
     backgroundColor: '#ffffff',
