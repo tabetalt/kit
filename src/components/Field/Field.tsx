@@ -4,12 +4,13 @@ import { getMargin, omitMargin } from '../util';
 
 export interface FieldsProps extends FieldProps<any> {
   alignItems?: string;
+  onChange?: () => null,
 }
 
 export const Field: ForwardRef<
   HTMLDivElement,
   FieldsProps
-> = React.forwardRef(({ as: Control = Input, label, name, alignItems = 'center', ...props }, ref) => {
+> = React.forwardRef(({ as: Control = Input, label, name, onChange = () => null, alignItems = 'center', ...props }, ref) => {
   return (
     <Flex {...getMargin(props)} sx={{ alignItems }}>
       <Label
@@ -24,6 +25,7 @@ export const Field: ForwardRef<
         name={name}
         {...omitMargin(props)}
         sx={{ flexGrow: 3 }}
+        onChange={onChange}
       />
     </Flex>
   );
