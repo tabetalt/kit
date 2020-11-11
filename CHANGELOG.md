@@ -1,3 +1,11 @@
+## [1.19.4](https://github.com/tabetalt/kit/compare/v1.19.3...v1.19.4) (2020-11-11)
+
+
+### Bug Fixes
+
+* **prefilled-input:** added firing on change event ([a8dfad9](https://github.com/tabetalt/kit/commit/a8dfad99188f6da9e5b1f474fc36193d28d70d96))
+* **prefilled-input:** changed ref to prefilled input ([95ebbf9](https://github.com/tabetalt/kit/commit/95ebbf9f9b0e24542b3e1dd4e31e36d4f14ed357))
+
 ## [1.19.3](https://github.com/tabetalt/kit/compare/v1.19.2...v1.19.3) (2020-11-10)
 
 
