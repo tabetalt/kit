@@ -3,7 +3,7 @@ export enum TextPosition {
   RIGHT = 'right',
 }
 
-export interface PrefilledInputProps {
+export interface PrefilledInputProps extends React.HTMLProps<HTMLInputElement> {
   label?: string;
   name?: string;
   value?: string;

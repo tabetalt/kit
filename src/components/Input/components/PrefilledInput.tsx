@@ -56,6 +56,9 @@ export const PrefilledInput: ForwardRef<
         setInputWidth(inputWidth); // apply width of the span to the input
       }
       setInputText(event.target.value);
+      if (props.onChange) {
+        props.onChange(event);
+      }
     };
 
     return (
@@ -122,7 +125,6 @@ export const PrefilledInput: ForwardRef<
               onChange={onChange}
               onFocus={() => setFocus(true)}
               onBlur={() => setFocus(false)}
-              {...props}
             />
             <span
               ref={spanRef}
