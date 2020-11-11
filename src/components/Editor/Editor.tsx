@@ -32,10 +32,12 @@ export type EditorProps = {
 };
 
 export const Editor: React.FC<EditorProps> = ({
-  text = [{
-    type: 'paragraph',
-    children: [ { text: '' }],
-  }],
+  text = [
+    {
+      type: 'paragraph',
+      children: [{ text: '' }],
+    },
+  ],
   toolbar = true,
   placeholder,
   spellCheck,
@@ -57,7 +59,8 @@ export const Editor: React.FC<EditorProps> = ({
           value={value}
           onChange={(newValue) => setValue(newValue)}
         >
-          {toolbar && (<EditorToolbar>
+          {toolbar && (
+            <EditorToolbar>
               <EditorMarkButton format="bold" icon="format_bold" />
               <EditorMarkButton format="italic" icon="format_italic" />
               <EditorMarkButton format="underline" icon="format_underlined" />

@@ -33,7 +33,9 @@ export const destructiveButton = () => (
 );
 
 export const iconButton = () => (
-  <IconButton><BoxIcon /></IconButton>
+  <IconButton>
+    <BoxIcon />
+  </IconButton>
 );
 export const disabledIconButton = () => (
   <IconButton disabled>
