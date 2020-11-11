@@ -1,3 +1,10 @@
+## [1.19.5](https://github.com/tabetalt/kit/compare/v1.19.4...v1.19.5) (2020-11-11)
+
+
+### Bug Fixes
+
+* **PrefilledInput:** Fixed PrefilledInput change, focus, blur events handling ([1c40c59](https://github.com/tabetalt/kit/commit/1c40c59cc435f360f87547ecb33d98fe5dc40422))
+
 ## [1.19.4](https://github.com/tabetalt/kit/compare/v1.19.3...v1.19.4) (2020-11-11)
 
 
