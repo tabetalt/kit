@@ -7,12 +7,10 @@ export default {
   parameters: { actions: { argTypesRegex: '^on.*' } },
 };
 
-export const defaultEditor = (props: any) => (
-  <Editor {...props} />
-);
+export const defaultEditor = (props: any) => <Editor {...props} />;
 
 export const withoutToolbarEditor = (props: any) => (
-  <Editor {...props} toolbar={false}/>
+  <Editor {...props} toolbar={false} />
 );
 
 export const autoFocusEditor = (props: any) => (

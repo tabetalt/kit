@@ -6,7 +6,7 @@ export enum TextPosition {
 export interface PrefilledInputProps {
   label?: string;
   name?: string;
-  text?: string;
+  value?: string;
   prefilledText: string;
   prefilledTextPosition: TextPosition | string;
   placeholder?: string;
