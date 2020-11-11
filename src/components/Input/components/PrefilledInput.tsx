@@ -23,7 +23,6 @@ export const PrefilledInput: ForwardRef<
     const spanRef = React.createRef<HTMLSpanElement>();
     const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
     const [focused, setFocus] = useState<boolean>(false);
-    const [inputText, setInputText] = useState<string>(value);
     const [inputWidth, setInputWidth] = useState<string>();
 
     useEffect(() => {
@@ -38,8 +37,7 @@ export const PrefilledInput: ForwardRef<
         spanRef.current.textContent = value;
       }
       setInputWidth(spanRef.current.offsetWidth + 'px');
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [placeholder, value]);
+    }, []);
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       // the hidden span takes the value of the input;
@@ -55,9 +53,23 @@ export const PrefilledInput: ForwardRef<
 
         setInputWidth(inputWidth); // apply width of the span to the input
       }
-      setInputText(event.target.value);
+      //setInputText(event.target.value);
       if (props.onChange) {
         props.onChange(event);
+      }
+    };
+
+    const onFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+      setFocus(true);
+      if (props.onFocus) {
+        props.onFocus(event);
+      }
+    };
+
+    const onBlur = (event: React.FocusEvent<HTMLInputElement>) => {
+      setFocus(false);
+      if (props.onFocus) {
+        props.onFocus(event);
       }
     };
 
@@ -76,7 +88,7 @@ export const PrefilledInput: ForwardRef<
             cursor: 'pointer',
             borderRadius: '23px',
             border: '1px solid',
-            borderColor: focused || inputText.length !== 0 ? 'gray0' : 'gray1',
+            borderColor: focused || value.length !== 0 ? 'gray0' : 'gray1',
             px: 3,
             py: '0.812rem',
             flexGrow: 3,
@@ -121,10 +133,11 @@ export const PrefilledInput: ForwardRef<
               }}
               type="text"
               placeholder={placeholder}
-              value={inputText}
+              value={value}
+              name={name}
               onChange={onChange}
-              onFocus={() => setFocus(true)}
-              onBlur={() => setFocus(false)}
+              onFocus={onFocus}
+              onBlur={onBlur}
             />
             <span
               ref={spanRef}
@@ -134,7 +147,7 @@ export const PrefilledInput: ForwardRef<
                 top: '-9999px',
               }}
             >
-              {inputText}
+              {value}
             </span>
           </Flex>
         </Container>
