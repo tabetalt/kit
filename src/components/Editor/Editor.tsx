@@ -15,6 +15,8 @@ import {
   EditorToolbar,
 } from './components';
 import { style } from './style';
+import { serializeHTML } from './serializeHTML';
+import { deserializeHTML } from './deserializeHTML';
 
 const HOTKEYS: { [key: string]: string } = {
   'mod+b': 'bold',
@@ -23,25 +25,22 @@ const HOTKEYS: { [key: string]: string } = {
   'mod+`': 'code',
 };
 
-export type EditorProps = {
-  text?: Node[];
+export interface EditorProps {
+  text?: string;
   toolbar?: boolean;
   placeholder?: string;
   spellCheck?: boolean;
   autoFocus?: boolean;
-};
+  onChange?: (htmlData: string | null) => void;
+}
 
 export const Editor: React.FC<EditorProps> = ({
-  text = [
-    {
-      type: 'paragraph',
-      children: [{ text: '' }],
-    },
-  ],
+  text = '<p>A closing paragraph!</p>',
   toolbar = true,
   placeholder,
   spellCheck,
   autoFocus,
+  onChange,
 }) => {
   const renderElement = useCallback(
     (props) => <EditorElement {...props} />,
@@ -49,7 +48,9 @@ export const Editor: React.FC<EditorProps> = ({
   );
   const renderLeaf = useCallback((props) => <EditorLeaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
-  const [value, setValue] = useState<Node[]>(text);
+  const document = new DOMParser().parseFromString(text, 'text/html');
+  const deserealizedText = deserializeHTML(document.body);
+  const [value, setValue] = useState<Node[]>(deserealizedText);
 
   return (
     <Container sx={style}>
@@ -57,7 +58,13 @@ export const Editor: React.FC<EditorProps> = ({
         <Slate
           editor={editor}
           value={value}
-          onChange={(newValue) => setValue(newValue)}
+          onChange={(newValue) => {
+            if (onChange) {
+              const htmlText = serializeHTML({ children: newValue });
+              onChange(htmlText);
+            }
+            setValue(newValue);
+          }}
         >
           {toolbar && (
             <EditorToolbar>

@@ -7,10 +7,12 @@ export default {
   parameters: { actions: { argTypesRegex: '^on.*' } },
 };
 
-export const defaultEditor = (props: any) => <Editor {...props} />;
+export const defaultEditor = (props: any) => (
+  <Editor {...props} text={textExample} />
+);
 
 export const withoutToolbarEditor = (props: any) => (
-  <Editor {...props} toolbar={false} />
+  <Editor {...props} text={textExample} toolbar={false} />
 );
 
 export const autoFocusEditor = (props: any) => (
@@ -21,39 +23,11 @@ export const spellCheckEditor = (props: any) => (
   <Editor {...props} text={textExample} spellCheck={true} />
 );
 
-const textExample = [
-  {
-    type: 'paragraph',
-    children: [
-      { text: 'This is editable ' },
-      { text: 'rich', bold: true },
-      { text: ' text, ' },
-      { text: 'much', italic: true },
-      { text: ' better than a ' },
-      { text: '<textarea>', code: true },
-      { text: '!' },
-    ],
-  },
-  {
-    type: 'paragraph',
-    children: [
-      {
-        text:
-          "Since it's rich text, you can do things like turn a selection of text ",
-      },
-      { text: 'bold', bold: true },
-      {
-        text:
-          ', or add a semantically rendered block quote in the middle of the page, like this:',
-      },
-    ],
-  },
-  {
-    type: 'block-quote',
-    children: [{ text: 'A wise quote.' }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: 'Try it out for yourself!' }],
-  },
-];
+const textExample = `<p><span>This is editable </span><span><strong>rich</strong></span><span> text, </span><span><em>much</em></span><span> better than a </span><span><code>textarea</code></span><span>!</span></p><p><span>Since it's rich text, you can do things like turn a selection of text </span><span><strong>bold</strong></span><span>, or add a semantically rendered block quote in the middle of the page, like this:</span></p><blockquote style="
+border-left: 2px solid #ddd;
+margin-left: 0;
+margin-right: 0;
+padding-left: 10px;
+color: #aaa;
+font-style: italic;
+"><span>A wise quote.</span></blockquote><p><span>Try it out for yourself!</span></p>`;
