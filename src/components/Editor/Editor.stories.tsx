@@ -8,19 +8,19 @@ export default {
 };
 
 export const defaultEditor = (props: any) => (
-  <Editor {...props} text={textExample} />
+  <Editor {...props} value={textExample} />
 );
 
 export const withoutToolbarEditor = (props: any) => (
-  <Editor {...props} text={textExample} toolbar={false} />
+  <Editor {...props} value={textExample} toolbar={false} />
 );
 
 export const autoFocusEditor = (props: any) => (
-  <Editor {...props} text={textExample} autoFocus={true} />
+  <Editor {...props} value={textExample} autoFocus={true} />
 );
 
 export const spellCheckEditor = (props: any) => (
-  <Editor {...props} text={textExample} spellCheck={true} />
+  <Editor {...props} value={textExample} spellCheck={true} />
 );
 
 const textExample = `<p><span>This is editable </span><span><strong>rich</strong></span><span> text, </span><span><em>much</em></span><span> better than a </span><span><code>textarea</code></span><span>!</span></p><p><span>Since it's rich text, you can do things like turn a selection of text </span><span><strong>bold</strong></span><span>, or add a semantically rendered block quote in the middle of the page, like this:</span></p><blockquote style="

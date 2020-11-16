@@ -26,7 +26,7 @@ const HOTKEYS: { [key: string]: string } = {
 };
 
 export interface EditorProps {
-  text?: string;
+  value?: string;
   toolbar?: boolean;
   placeholder?: string;
   spellCheck?: boolean;
@@ -35,7 +35,7 @@ export interface EditorProps {
 }
 
 export const Editor: React.FC<EditorProps> = ({
-  text = '<p>A closing paragraph!</p>',
+  value = '<p></p>',
   toolbar = true,
   placeholder,
   spellCheck,
@@ -48,22 +48,22 @@ export const Editor: React.FC<EditorProps> = ({
   );
   const renderLeaf = useCallback((props) => <EditorLeaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
-  const document = new DOMParser().parseFromString(text, 'text/html');
+  const document = new DOMParser().parseFromString(value, 'text/html');
   const deserealizedText = deserializeHTML(document.body);
-  const [value, setValue] = useState<Node[]>(deserealizedText);
+  const [editorText, setEditorText] = useState<Node[]>(deserealizedText);
 
   return (
     <Container sx={style}>
       <Container className="editor-container">
         <Slate
           editor={editor}
-          value={value}
+          value={editorText}
           onChange={(newValue) => {
             if (onChange) {
               const htmlText = serializeHTML({ children: newValue });
               onChange(htmlText);
             }
-            setValue(newValue);
+            setEditorText(newValue);
           }}
         >
           {toolbar && (
