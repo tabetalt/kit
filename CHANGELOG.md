@@ -1,3 +1,11 @@
+## [1.19.6](https://github.com/tabetalt/kit/compare/v1.19.5...v1.19.6) (2020-11-16)
+
+
+### Bug Fixes
+
+* **editor:** fixed default value component ([170fc4c](https://github.com/tabetalt/kit/commit/170fc4cc525c83fb301631111ad5ca7379cc1bd1))
+* **editor-serialize-text:** added parsing html text for editor ([7534bc7](https://github.com/tabetalt/kit/commit/7534bc74a92bc46260cb30613d52dc62a4b3b18d))
+
 ## [1.19.5](https://github.com/tabetalt/kit/compare/v1.19.4...v1.19.5) (2020-11-11)
 
 
