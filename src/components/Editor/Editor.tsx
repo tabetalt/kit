@@ -61,7 +61,6 @@ export const Editor: React.FC<EditorProps> = ({
           onChange={(newValue) => {
             if (onChange) {
               const htmlText = serializeHTML({ children: newValue });
-              console.log(htmlText)
               onChange(htmlText);
             }
             setEditorText(newValue);
