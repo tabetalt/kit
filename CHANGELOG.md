@@ -1,3 +1,10 @@
+## [1.19.7](https://github.com/tabetalt/kit/compare/v1.19.6...v1.19.7) (2020-11-18)
+
+
+### Bug Fixes
+
+* **editor-inputTag:** added default value for editor. ([6f99ed9](https://github.com/tabetalt/kit/commit/6f99ed9aea284a960b33b5b0e96ab5b4a853e12f))
+
 ## [1.19.6](https://github.com/tabetalt/kit/compare/v1.19.5...v1.19.6) (2020-11-16)
 
 
