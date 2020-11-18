@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useRef } from 'react';
-import { jsx } from 'theme-ui';
+import { Container, jsx } from 'theme-ui';
 import ReactTags from 'react-tag-autocomplete';
 import { TrashIcon } from '../../icons';
 import { InputTagsProps, RefObject, TagProps } from './types';
@@ -41,7 +41,7 @@ export const InputTags: React.FC<InputTagsProps> = (props) => {
   };
 
   return (
-    <div
+    <Container
       className={`tabetalt-input-tags__wrapper ${!!prefix && 'has-prefix'}`}
       sx={styles}
     >
@@ -75,7 +75,7 @@ export const InputTags: React.FC<InputTagsProps> = (props) => {
           sx={{ position: 'absolute', top: 12, right: 24, cursor: 'pointer' }}
         />
       )}
-    </div>
+    </Container>
   );
 };
 

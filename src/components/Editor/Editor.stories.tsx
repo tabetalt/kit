@@ -8,7 +8,7 @@ export default {
 };
 
 export const defaultEditor = (props: any) => (
-  <Editor {...props} value={textExample} />
+  <Editor {...props} />
 );
 
 export const withoutToolbarEditor = (props: any) => (

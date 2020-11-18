@@ -2,7 +2,7 @@ import { Text } from 'slate';
 
 export const serializeHTML = (node: { [key: string]: any }) => {
   if (Text.isText(node)) {
-    let children = node.text;
+    let children = node.text ? node.text : ' ';
     if (node.bold) {
       children = `<strong>${children}</strong>`;
     }
