@@ -1,3 +1,10 @@
+## [1.19.8](https://github.com/tabetalt/kit/compare/v1.19.7...v1.19.8) (2020-11-18)
+
+
+### Bug Fixes
+
+* **input-tag:** fixed z-index of suggetions ([c683c8c](https://github.com/tabetalt/kit/commit/c683c8c9cb6d997563259819c4e3099a98c33861))
+
 ## [1.19.7](https://github.com/tabetalt/kit/compare/v1.19.6...v1.19.7) (2020-11-18)
 
 
