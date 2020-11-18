@@ -105,6 +105,7 @@ export default {
       top: '100%',
       left: 0,
       width: '100%',
+      zIndex: 10,
       ul: {
         my: 1,
         p: 0,
