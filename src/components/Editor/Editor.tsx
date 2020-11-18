@@ -26,7 +26,7 @@ const HOTKEYS: { [key: string]: string } = {
 };
 
 export interface EditorProps {
-  value?: string;
+  value?: string | null;
   toolbar?: boolean;
   placeholder?: string;
   spellCheck?: boolean;
@@ -35,7 +35,7 @@ export interface EditorProps {
 }
 
 export const Editor: React.FC<EditorProps> = ({
-  value = '<p></p>',
+  value = '<p><span> </span></p>',
   toolbar = true,
   placeholder,
   spellCheck,
@@ -48,7 +48,7 @@ export const Editor: React.FC<EditorProps> = ({
   );
   const renderLeaf = useCallback((props) => <EditorLeaf {...props} />, []);
   const editor = useMemo(() => withHistory(withReact(createEditor())), []);
-  const document = new DOMParser().parseFromString(value, 'text/html');
+  const document = new DOMParser().parseFromString(value ? value : '<p><span> </span></p>', 'text/html');
   const deserealizedText = deserializeHTML(document.body);
   const [editorText, setEditorText] = useState<Node[]>(deserealizedText);
 
@@ -61,6 +61,7 @@ export const Editor: React.FC<EditorProps> = ({
           onChange={(newValue) => {
             if (onChange) {
               const htmlText = serializeHTML({ children: newValue });
+              console.log(htmlText)
               onChange(htmlText);
             }
             setEditorText(newValue);
