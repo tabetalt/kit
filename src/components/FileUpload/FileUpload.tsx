@@ -78,7 +78,7 @@ export const FileUpload: React.FC<FileUploadProps> = (props) => {
   };
 
   return (
-    <div>
+    <div sx={{ width: '100%' }}>
       <label htmlFor={id}>
         {buttonComponent || (
           <FileUploadButton loading={loading} onClick={onButtonClick} />
