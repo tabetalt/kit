@@ -1,3 +1,10 @@
+## [1.19.9](https://github.com/tabetalt/kit/compare/v1.19.8...v1.19.9) (2020-11-19)
+
+
+### Bug Fixes
+
+* **FileInput:** FileInput component wrapper width fix ([#92](https://github.com/tabetalt/kit/issues/92)) ([feb2439](https://github.com/tabetalt/kit/commit/feb2439cef39d77a4a29afdc488a9937e1739d29))
+
 ## [1.19.8](https://github.com/tabetalt/kit/compare/v1.19.7...v1.19.8) (2020-11-18)
 
 
