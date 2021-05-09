@@ -1,3 +1,15 @@
+# [1.20.0](https://github.com/tabetalt/kit/compare/v1.19.9...v1.20.0) (2021-05-09)
+
+
+### Bug Fixes
+
+* Fix Logout size. ([ec492f1](https://github.com/tabetalt/kit/commit/ec492f11c328709b6c5e60b99d2697a912fb3a67))
+
+
+### Features
+
+* Add logout icon. ([2bd7851](https://github.com/tabetalt/kit/commit/2bd7851b57939245789bcee305f8e6d7b4562f94))
+
 ## [1.19.9](https://github.com/tabetalt/kit/compare/v1.19.8...v1.19.9) (2020-11-19)
 
 
