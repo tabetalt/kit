@@ -12,6 +12,7 @@ import DotsIcon from './DotsIcon';
 import EyeIcon from './EyeIcon';
 import FolderIcon from './FolderIcon';
 import ListIcon from './ListIcon';
+import LogoutIcon from './LogoutIcon';
 import OpenIcon from './OpenIcon';
 import PencilIcon from './PencilIcon';
 import QuestionIcon from './QuestionIcon';
@@ -43,6 +44,8 @@ export const Overview = () => (
 
     <ListIcon />
 
+    <LogoutIcon />
+
     <OpenIcon />
 
     <PencilIcon />
@@ -69,6 +72,7 @@ export const Dots = () => <DotsIcon />;
 export const Eye = () => <EyeIcon />;
 export const Folder = () => <FolderIcon />;
 export const List = () => <ListIcon />;
+export const Logout = () => <LogoutIcon />;
 export const Open = () => <OpenIcon />;
 export const Pencil = () => <PencilIcon />;
 export const Question = () => <QuestionIcon />;

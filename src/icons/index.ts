@@ -10,6 +10,7 @@ import DotsIcon from './DotsIcon';
 import EyeIcon from './EyeIcon';
 import FolderIcon from './FolderIcon';
 import ListIcon from './ListIcon';
+import LogoutIcon from './LogoutIcon';
 import OpenIcon from './OpenIcon';
 import PencilIcon from './PencilIcon';
 import QuestionIcon from './QuestionIcon';
@@ -28,6 +29,7 @@ export {
   EyeIcon,
   FolderIcon,
   ListIcon,
+  LogoutIcon,
   OpenIcon,
   PencilIcon,
   QuestionIcon,
