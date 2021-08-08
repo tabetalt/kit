@@ -2,17 +2,6 @@
   "name": "@tabetalt/kit",
   "version": "1.0.0",
   "description": "Tabetalt's React-based Components",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "repository": "git@github.com:tabetalt/kit.git",
-  "author": "Tabetalt.no AS",
-  "license": "Apache-2.0",
-  "engines": {
-    "node": ">=10"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "style-guide",
     "theme-ui",
@@ -22,10 +11,42 @@
     "design",
     "tabetalt"
   ],
+  "repository": "github:tabetalt/kit",
+  "license": "Apache-2.0",
+  "author": "Tabetalt.no AS",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "files": [
     "build/",
     "!**/*.stories.*"
   ],
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "build": "tsc -p ./tsconfig.dist.json",
+    "storybook": "start-storybook -p 9009 -s ./assets",
+    "build-storybook": "build-storybook -s ./assets",
+    "generate": "node scripts/generate-icons.js",
+    "lint": "eslint \"src/**/*.ts\"",
+    "pretty": "prettier --write ./src"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test"
+    }
+  },
+  "dependencies": {
+    "@types/escape-html": "^1.0.0",
+    "escape-html": "^1.0.3",
+    "framer-motion": "^2.6.15",
+    "react-content-loader": "^5.1.1",
+    "react-modal": "^3.11.2",
+    "react-table": "^7.5.1",
+    "react-tag-autocomplete": "^6.1.0",
+    "slate": "^0.59.0",
+    "slate-history": "^0.59.0",
+    "slate-hyperscript": "^0.59.0",
+    "slate-react": "^0.59.0"
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^6.0.0-rc.3",
     "@storybook/addon-docs": "^6.0.0-rc.3",
@@ -76,6 +97,12 @@
     "react-dom": "^16",
     "theme-ui": "next"
   },
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
@@ -94,32 +121,5 @@
       ],
       "@semantic-release/npm"
     ]
-  },
-  "scripts": {
-    "test": "jest --passWithNoTests",
-    "build": "tsc -p ./tsconfig.dist.json",
-    "storybook": "start-storybook -p 9009 -s ./assets",
-    "build-storybook": "build-storybook -s ./assets",
-    "generate": "node scripts/generate-icons.js",
-    "lint": "eslint \"src/**/*.ts\"",
-    "pretty": "prettier --write ./src"
-  },
-  "dependencies": {
-    "@types/escape-html": "^1.0.0",
-    "escape-html": "^1.0.3",
-    "framer-motion": "^2.6.15",
-    "react-content-loader": "^5.1.1",
-    "react-modal": "^3.11.2",
-    "react-table": "^7.5.1",
-    "react-tag-autocomplete": "^6.1.0",
-    "slate": "^0.59.0",
-    "slate-history": "^0.59.0",
-    "slate-hyperscript": "^0.59.0",
-    "slate-react": "^0.59.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn lint && yarn test"
-    }
   }
 }
