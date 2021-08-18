@@ -1,3 +1,10 @@
+## [1.21.1](https://github.com/tabetalt/kit/compare/v1.21.0...v1.21.1) (2021-08-18)
+
+
+### Bug Fixes
+
+* add `dist` to `"files"` ([ac63818](https://github.com/tabetalt/kit/commit/ac638186cd4c82cd8637cee4e9da9c83d0747e60))
+
 # [1.21.0](https://github.com/tabetalt/kit/compare/v1.20.0...v1.21.0) (2021-08-18)
 
 
