@@ -14,8 +14,9 @@
   "repository": "github:tabetalt/kit",
   "license": "Apache-2.0",
   "author": "Tabetalt.no AS",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
   "files": [
     "build/",
     "!**/*.stories.*"
