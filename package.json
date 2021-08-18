@@ -23,7 +23,9 @@
   ],
   "scripts": {
     "test": "jest --passWithNoTests",
-    "build": "tsc -p ./tsconfig.dist.json",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "storybook": "start-storybook -p 9009 -s ./assets",
     "build-storybook": "build-storybook -s ./assets",
     "generate": "node scripts/generate-icons.js",
