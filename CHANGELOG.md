@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/tabetalt/kit/compare/v1.20.0...v1.21.0) (2021-08-18)
+
+
+### Features
+
+* Add ESM/CJS ([90c3f41](https://github.com/tabetalt/kit/commit/90c3f419531b04e63ce0284328ff7bd7121b60a3))
+
 # [1.20.0](https://github.com/tabetalt/kit/compare/v1.19.9...v1.20.0) (2021-05-09)
 
 
